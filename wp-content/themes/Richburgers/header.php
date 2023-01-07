@@ -19,16 +19,6 @@
     ?>
 
     <header id="masthead" class="<?php echo esc_attr($wrapper_classes); ?>">
-        <pre>
-    <?php
-    print_r('prázdnota');
-    ?></pre>
-
-        <?php
-        if (is_active_sidebar('sidebar-1')) : ?>
-            <?php dynamic_sidebar('sidebar-1'); ?>
-        <?php endif;
-        ?>
 
         <div class="floatWrapper">
             <div class="contact">
@@ -52,18 +42,19 @@
             </div>
         </div>
 
+        <?php
+        $custom_logo_id = get_theme_mod('custom_logo');
+        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+        if (has_custom_logo()) {
+            echo    '<a class="site-logo" 
+        href="' . get_home_url() . '">
+        <img src="' . esc_url($logo[0]) . '" 
+        alt="' . get_bloginfo('name') . '">
+        </a>';
+        }
+        ?>
+
         <section class="mainHeader">
-            <?php
-            $custom_logo_id = get_theme_mod('custom_logo');
-            $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-            if (has_custom_logo()) {
-                echo    '<a class="site-logo" 
-                        href="' . get_home_url() . '">
-                        <img src="' . esc_url($logo[0]) . '" 
-                        alt="' . get_bloginfo('name') . '">
-                        </a>';
-            }
-            ?>
             <div class="wrapper">
                 <h1><?php
                     $site_name = get_bloginfo('name');
@@ -92,18 +83,6 @@
             'menu_id' => 'altNav'
         ));
         ?>
-        <?php
-        $custom_logo_id = get_theme_mod('custom_logo');
-        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-        if (has_custom_logo()) {
-            echo    '<a class="site-logo" 
-        href="' . get_home_url() . '">
-        <img src="' . esc_url($logo[0]) . '" 
-        alt="' . get_bloginfo('name') . '">
-        </a>';
-        }
-        ?>
-
 
     </header><!-- #masthead -->
     <main id="main" class="site-main">

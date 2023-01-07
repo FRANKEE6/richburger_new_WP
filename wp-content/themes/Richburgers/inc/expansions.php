@@ -53,9 +53,15 @@ function rich_burger_customize_register($wp_customize)
         'description' => 'Úprava otváracích hodín v hlavičke',
     ));
 
+    $wp_customize->add_section('address', array(
+        'title' => 'Adresa prevádzky',
+        'priority' => 32,
+        'description' => 'Tu zapíš adresu na ktorej sa prevádzka nachádza',
+    ));
+
     $wp_customize->add_section('copyright', array(
         'title' => 'Copyright',
-        'priority' => 32,
+        'priority' => 33,
         'description' => 'Úprava textu copyright sekcie vo footeri',
     ));
 
@@ -114,6 +120,18 @@ function rich_burger_customize_register($wp_customize)
 
     $wp_customize->add_setting('open_hours_2', array(
         'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_setting('address_street', array(
+        'default' => 'Športová 23',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_setting('address_city', array(
+        'default' => 'Nové Mesto nad Váhom 915 01',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));
@@ -241,6 +259,22 @@ function rich_burger_customize_register($wp_customize)
         'section' => 'open_hours',
         'label' => 'Otváracie hodiny - druhý riadok',
         'description' => 'Miesto vyhradené pre dodatočný výpis otváracích hodín (ak necháš prázdne, riadok bude skrytý na stránke)',
+    ));
+
+    $wp_customize->add_control('address_street', array(
+        'type' => 'text',
+        'priority' => 10,
+        'section' => 'address',
+        'label' => 'Ulica',
+        'description' => 'Zadaj názov ulice a popisné číslo',
+    ));
+
+    $wp_customize->add_control('address_city', array(
+        'type' => 'text',
+        'priority' => 11,
+        'section' => 'address',
+        'label' => 'Mesto',
+        'description' => 'Zadaj názov mesta a PSČ',
     ));
 
     $wp_customize->add_control('copy_by', array(
