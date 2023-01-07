@@ -4,10 +4,20 @@
  *  Odstránenie sekcie pre komentáre z admin menu
  */
 
-add_action('admin_menu', 'lans_edit_comment_menu', 11);
-function lans_edit_comment_menu()
+add_action('admin_menu', 'rich_burger_edit_comment_menu', 11);
+function rich_burger_edit_comment_menu()
 {
     remove_menu_page('edit-comments.php');
+}
+
+/**
+ *  Odstránenie sekcie pre príspevky z admin menu
+ */
+
+add_action('admin_menu', 'rich_burger_edit_menu', 11);
+function rich_burger_edit_menu()
+{
+    remove_menu_page('edit.php');
 }
 
 /**
