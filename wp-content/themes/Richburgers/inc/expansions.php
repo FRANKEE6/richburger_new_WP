@@ -80,36 +80,30 @@ function rich_burger_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('social_url_1', array(
-        'transport' => 'refresh',
-        'sanitize_callback' => 'rich_burger_sanitize_url',
+        'sanitize_callback' => 'sanitize_url',
     ));
 
     $wp_customize->add_setting('social_url_2', array(
-        'transport' => 'refresh',
-        'sanitize_callback' => 'rich_burger_sanitize_url',
+        'sanitize_callback' => 'sanitize_url',
     ));
 
     $wp_customize->add_setting('social_url_3', array(
-        'transport' => 'refresh',
-        'sanitize_callback' => 'rich_burger_sanitize_url',
+        'sanitize_callback' => 'sanitize_url',
     ));
 
     $wp_customize->add_setting('social_icon_1', array(
         'default' => 'fa-brands fa-facebook',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'rich_burger_sanitize_radio',
+        'sanitize_callback' => false,
     ));
 
     $wp_customize->add_setting('social_icon_2', array(
         'default' => 'fa-brands fa-instagram',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'rich_burger_sanitize_radio',
+        'sanitize_callback' => false,
     ));
 
     $wp_customize->add_setting('social_icon_3', array(
         'default' => 'fa-solid fa-t',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'rich_burger_sanitize_radio',
+        'sanitize_callback' => false,
     ));
 
     $wp_customize->add_setting('open_hours_1', array(
@@ -181,7 +175,7 @@ function rich_burger_customize_register($wp_customize)
         'choices' => array(
             'fa-brands fa-facebook' => 'Facebook',
             'fa-brands fa-instagram' => 'Instagram',
-            'fa-solid fa-tr' => 'Trip Advisor',
+            'fa-solid fa-t' => 'Trip Advisor',
         ),
     ));
 
@@ -213,7 +207,7 @@ function rich_burger_customize_register($wp_customize)
         'type' => 'url',
         'priority' => 15,
         'section' => 'socials_and_contact',
-        'label' => 'Odkaz na sociálnu sieť 2',
+        'label' => 'Odkaz na sociálnu sieť 3',
         'description' => 'Zadaj URL adresu',
         'input_attrs' => array(
             'placeholder' => 'Zadaj URL',
@@ -224,7 +218,7 @@ function rich_burger_customize_register($wp_customize)
         'type' => 'radio',
         'priority' => 15,
         'section' => 'socials_and_contact',
-        'label' => 'Logo sociálnej siete 2',
+        'label' => 'Logo sociálnej siete 3',
         'description' => 'Vyber možnosť',
         'choices' => array(
             'fa-brands fa-facebook' => 'Facebook',
@@ -282,21 +276,6 @@ function rich_burger_customize_register($wp_customize)
     function rich_burger_sanitize_email($email, $setting)
     {
         return (is_email($email) ? $email : $setting->default);
-    }
-
-    function rich_burger_sanitize_url($url)
-    {
-        return esc_url_raw($url);
-    }
-
-    function rich_burger_sanitize_radio($input, $setting)
-    {
-
-        $input = sanitize_key($input);
-
-        $choices = $setting->manager->get_control($setting->id)->choices;
-
-        return (array_key_exists($input, $choices) ? $input : $setting->default);
     }
 
     function rich_burger_sanitize_checkbox($checked)
