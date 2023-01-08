@@ -1,8 +1,7 @@
 </main><!-- #main -->
 
 <footer id="colophon" class="site-footer">
-
-    <footer>
+    <div class="footer-flex">
         <section class="address">
             <ul>
                 <li><?php echo get_bloginfo('name') ?></li>
@@ -15,38 +14,23 @@
             </ul>
         </section>
         <section class="google-map">
-            <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="1200" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%C5%A0portov%C3%A1%20490,%20915%2001%20Nov%C3%A9%20Mesto%20nad%20V%C3%A1hom&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    <style>
-                        .mapouter {
-                            position: relative;
-                            text-align: right;
-                            height: 500px;
-                            width: 1200px;
-                        }
-                    </style><a href="https://www.embedgooglemap.net">google maps embed zoom</a>
-                    <style>
-                        .gmap_canvas {
-                            overflow: hidden;
-                            background: none !important;
-                            height: 500px;
-                            width: 1200px;
-                        }
-                    </style>
+            <?php
+            if (is_active_sidebar('sidebar-2')) : ?>
+                <div id="referals-sidebar" class="referals-sidebar widget-area" role="complementary">
+                    <?php dynamic_sidebar('sidebar-2'); ?>
                 </div>
-            </div>
+            <?php endif; ?>
         </section>
-    </footer>
-
-    <div class="copyright">
-        <?php echo get_theme_mod('copy_by') ?>
-        <span>
-            <?php echo get_theme_mod('copy_text') ?>
-        </span>
-        <br>
-        <span class="site-creator">Kontak na tvorcu stránky <a href="mailto:marcel.urban@centrum.sk">TU</span>
     </div>
-
+    <section class="copyright">
+        <p>
+            <?php echo get_theme_mod('copy_by') ?>
+            <span>
+                <?php echo get_theme_mod('copy_text') ?>
+            </span>
+        </p>
+        <p class="site-creator">Kontak na tvorcu stránky <a href="mailto:marcel.urban@centrum.sk">TU</p>
+    </section>
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>

@@ -10,23 +10,23 @@ function rich_burger_widgets_init()
 
     register_sidebar(
         array(
-            'name'          => esc_html__('Vrch hlavičky', 'rich_burger'),
-            'id'            => 'sidebar-1',
-            'description'   => esc_html__('Sem vlož obsah, ktorý sa objaví úplne na vrchu stránky', 'rich_burger'),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-        )
-    );
-
-    register_sidebar(
-        array(
             'name'          => esc_html__('Postranný obsah', 'rich_burger'),
-            'id'            => 'sidebar-2',
+            'id'            => 'sidebar-1',
             'description'   => esc_html__('Sem vlož obsah, ktorý sa objaví na boku stránky', 'rich_burger'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
             'before_title'  => '<h2>',
             'after_title'   => '</h2>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => esc_html__('Footer', 'rich_burger'),
+            'id'            => 'sidebar-2',
+            'description'   => esc_html__('Sem vlož obsah, ktorý sa objaví vo footeri', 'rich_burger'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
         )
     );
 }

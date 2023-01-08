@@ -1,62 +1,78 @@
-// Footer ___________________________________________________________________________________________________________
-
+// Footer
+//________________________________________________________________________
+// General footer settings
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
   color: $logo-gold;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #000;
-  height: -webkit-max-content;
-  height: -moz-max-content;
+  background-color: $footer-background-color;
   height: max-content;
-  padding: em(10) 0.3%;
-  p {
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    margin-left: 1%;
-    width: 7vw;
-    -ms-flex-negative: 3;
-    flex-shrink: 3;
-  }
+  padding: em(10) 1vw;
   a:hover {
     color: $logo-green;
   }
-  img {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-    width: 300px;
-    height: auto;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-  }
+}
+
+// Footer main content
+.footer-flex {
+  @include flexing(row, nowrap, space-between, center);
   .address {
-    margin-left: 2%;
-    padding-right: 1%;
-  }
-  ul {
-    list-style: none;
-    min-width: max-content;
-    -ms-flex-negative: 1;
-    flex-shrink: 1;
-    border-left: 3px solid $banner-color;
-    li {
-      display: block;
-      width: max-content;
-      margin: 0;
-      line-height: em(25);
-      white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: 1vw;
+    padding-right: 1vw;
+    max-width: 20%;
+    ul {
+      list-style: none;
+      min-width: max-content;
+      border-left: 3px solid $banner-color;
+      padding-left: 1vw;
+      font-size: em(20);
+      li {
+        display: block;
+        width: max-content;
+        margin: 0;
+        line-height: em(25);
+        white-space: nowrap;
+      }
     }
   }
-  iframe {
-    width: 500px;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
+
+  // Google mapa
+  .google-map {
+    max-width: 75%;
+    .mapouter,
+    .gmap_canvas {
+      height: auto;
+      width: auto;
+      max-width: 1200px;
+      max-height: 400px;
+    }
+    .mapouter {
+      position: relative;
+      text-align: right;
+      .gmap_canvas {
+        overflow: hidden;
+        background: none;
+      }
+    }
+  }
+}
+
+// Copyright section
+.copyright {
+  text-align: center;
+  color: $header-color;
+  padding-top: em(10);
+  font-size: em(12);
+  p {
+    margin: 0;
+    span::before {
+      content: "\00a0";
+    }
+  }
+  .site-creator {
+    font-size: em(10, 12);
+    a {
+      color: $logo-brown;
+    }
   }
 }

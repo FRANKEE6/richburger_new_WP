@@ -16,6 +16,15 @@ function rich_burger_scripts()
 
     // Main stylesheet
     wp_enqueue_style('rich_burger-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get('Version'));
+
+    // Responsive embeds script.
+    wp_enqueue_script(
+        'rich-burger-responsive-embeds-script',
+        get_template_directory_uri() . '/js/responsive-embeds.js',
+        array(),
+        false,
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'rich_burger_scripts');
 
