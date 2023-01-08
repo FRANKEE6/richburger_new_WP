@@ -536,12 +536,60 @@ header {
   color: #f9f9f9;
 }
 
+.site-main {
+  width: 95vw;
+  margin: 0 auto;
+  line-height: 1.8125em;
+  text-align: center;
+  font-family: "Lora", serif;
+}
+.site-main h2 {
+  margin-top: 0.625em;
+  font-size: 2.8125em;
+}
+.site-main p {
+  max-width: 800px;
+  margin: 1.5625em auto;
+  font-size: 1.1875em;
+  letter-spacing: 0.3px;
+}
+
+.frontpage-flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+.frontpage-flex-wrapper .main-content {
+  width: 75%;
+}
+.frontpage-flex-wrapper .side-content {
+  width: 25%;
+  padding-left: 2.5vw;
+}
+
+.subsocial {
+  font-size: 4.375em;
+}
+.subsocial a {
+  padding: 0 6%;
+}
+.subsocial a i:hover {
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+  rotate: 360deg;
+}
+
 /*@import "css/Sass/_main_index.scss";
 @import "css/Sass/_main_offer.scss";
-@import "css/Sass/_main_rozvoz.scss";
 @import "css/Sass/_main_gallery.scss";
 @import "css/Sass/_main_about.scss";
-@import "css/Sass/_main_gdpr.scss";*/
+*/
 footer {
   width: 100%;
   color: #e4df04;

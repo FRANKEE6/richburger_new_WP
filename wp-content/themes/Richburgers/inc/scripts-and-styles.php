@@ -11,8 +11,9 @@ function rich_burger_scripts()
     // Normalize stylesheet
     wp_enqueue_style('normalize-style', get_template_directory_uri() . '/css/normalize.css', array());
 
-    // Main stylesheet
+    // Google fonts
     wp_enqueue_style('Sedfwick-Ave-Display-google-font', 'https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+    wp_enqueue_style('Lora-google-font', 'https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
     // Main stylesheet
     wp_enqueue_style('rich_burger-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get('Version'));

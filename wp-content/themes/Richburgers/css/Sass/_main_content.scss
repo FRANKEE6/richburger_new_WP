@@ -1,0 +1,44 @@
+// Generálne nastavenia hlavného obsahu stránok
+//________________________________________________________________________
+.site-main {
+  width: 95vw;
+  margin: 0 auto;
+  line-height: em(29);
+  text-align: center;
+  font-family: $main-ff;
+  h2 {
+    margin-top: em(10);
+    font-size: em(45);
+  }
+  p {
+    max-width: 800px;
+    margin: em(25) auto;
+    font-size: em(19);
+    letter-spacing: 0.3px;
+  }
+}
+
+.frontpage-flex-wrapper {
+  @include flexing(row, nowrap, space-between);
+  .main-content {
+    width: 75%;
+  }
+  .side-content {
+    width: 25%;
+    padding-left: 2.5vw;
+  }
+}
+
+// Nastavenia subsocial shortkódu
+.subsocial {
+  font-size: em(70);
+  a {
+    padding: 0 6%;
+    i:hover {
+      -webkit-transform: scale(1.6);
+      -ms-transform: scale(1.6);
+      transform: scale(1.6);
+      rotate: 360deg;
+    }
+  }
+}

@@ -1,7 +1,23 @@
 <?php
-
 get_header();
+if (is_active_sidebar('sidebar-1')) : ?>
 
-the_content();
+    <div class="frontpage-flex-wrapper">
+        <section class="main-content">
+            <?php the_content(); ?>
+        </section>
+        <aside class="side-content">
+            <div class="widget-area" role="complementary">
+                <?php dynamic_sidebar('sidebar-1'); ?>
+            </div>
 
-get_footer();
+        </aside>
+    </div>
+<?php else : ?>
+    <section class="main-content">
+        <?php the_content(); ?>
+    </section>
+<?php endif; ?>
+
+
+<?php get_footer();
