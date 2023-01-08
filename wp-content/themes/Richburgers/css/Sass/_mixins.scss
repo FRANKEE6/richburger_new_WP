@@ -1,0 +1,16 @@
+@mixin flexing(
+  $direction: row,
+  $wrap: nowrap,
+  $justify: flex-start,
+  $align-items: stretch,
+  $align-content: stretch
+) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align-items;
+  align-content: $align-content;
+}
