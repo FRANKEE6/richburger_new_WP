@@ -440,6 +440,7 @@ header {
   letter-spacing: 0.06em;
   font-weight: 400;
   text-shadow: 3px 5px 6px #71b441;
+  text-transform: uppercase;
 }
 .header-wrapper .openingHours {
   text-indent: 0;
