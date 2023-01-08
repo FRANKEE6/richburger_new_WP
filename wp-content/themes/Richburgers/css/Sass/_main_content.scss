@@ -34,11 +34,45 @@
   font-size: em(70);
   a {
     padding: 0 6%;
-    i:hover {
+    .fa-facebook,
+    .fa-instagram,
+    .fa-t {
+      transition: 1s;
+      color: $logo-green;
+    }
+    .fa-facebook:hover,
+    .fa-instagram:hover,
+    .fa-t:hover {
       -webkit-transform: scale(1.6);
       -ms-transform: scale(1.6);
       transform: scale(1.6);
       rotate: 360deg;
     }
+    .fa-facebook:hover {
+      color: $fb-blue;
+    }
+    .fa-instagram:hover {
+      color: $ig-rose;
+    }
+    .fa-t:hover {
+      color: $ta-green;
+    }
+  }
+}
+
+// GDPR
+.gdpr-section {
+  font-size: em(14);
+  max-width: 800px;
+  text-align: left;
+  margin: 0 auto;
+  p {
+    font-size: inherit;
+  }
+  h2 {
+    font-size: em(22, 14);
+    margin-top: em(15, 14);
+    text-transform: initial;
+    padding: 0 em(10, 14);
   }
 }

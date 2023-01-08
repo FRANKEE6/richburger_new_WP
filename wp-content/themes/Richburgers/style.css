@@ -298,6 +298,11 @@ a {
   color: #e4df04;
 }
 
+#cmplz-document {
+  margin: 0 auto;
+  text-align: left;
+}
+
 header {
   position: relative;
   background-color: #000;
@@ -578,11 +583,44 @@ header {
 .subsocial a {
   padding: 0 6%;
 }
-.subsocial a i:hover {
+.subsocial a .fa-facebook,
+.subsocial a .fa-instagram,
+.subsocial a .fa-t {
+  transition: 1s;
+  color: #71b441;
+}
+.subsocial a .fa-facebook:hover,
+.subsocial a .fa-instagram:hover,
+.subsocial a .fa-t:hover {
   -webkit-transform: scale(1.6);
   -ms-transform: scale(1.6);
   transform: scale(1.6);
   rotate: 360deg;
+}
+.subsocial a .fa-facebook:hover {
+  color: #1a6ed8;
+}
+.subsocial a .fa-instagram:hover {
+  color: #e1306c;
+}
+.subsocial a .fa-t:hover {
+  color: #00af87;
+}
+
+.gdpr-section {
+  font-size: 0.875em;
+  max-width: 800px;
+  text-align: left;
+  margin: 0 auto;
+}
+.gdpr-section p {
+  font-size: inherit;
+}
+.gdpr-section h2 {
+  font-size: 1.5714285714em;
+  margin-top: 1.0714285714em;
+  text-transform: initial;
+  padding: 0 0.7142857143em;
 }
 
 /*@import "css/Sass/_main_index.scss";

@@ -1,6 +1,7 @@
 <?php
 get_header();
-if (is_active_sidebar('sidebar-1')) : ?>
+
+if (is_front_page() && is_active_sidebar('sidebar-1')) : ?>
 
     <div class="frontpage-flex-wrapper">
         <section class="main-content">
