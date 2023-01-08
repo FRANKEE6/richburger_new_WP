@@ -5,7 +5,7 @@
  */
 
 // Úprava telefónneho čísla na správny tvar
-function telephone_number($number)
+function filter_telephone_number($number)
 {
     $number = filter_var($number, FILTER_SANITIZE_NUMBER_INT);
     $number = str_replace(array('+', '-'), '', $number);

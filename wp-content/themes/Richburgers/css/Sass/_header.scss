@@ -1,8 +1,8 @@
-// Hlavička___________________________
+// Hlavička - generálne nastavenia
 
 header {
   position: relative;
-  background-color: black;
+  background-color: $header-background-color;
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -10,7 +10,7 @@ header {
   color: $logo-gold;
 }
 
-.mainHeader:after {
+/*.mainHeader:after {
   content: "";
   width: em(250);
   height: em(200);
@@ -30,113 +30,95 @@ header {
   animation-duration: 4s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
+}*/
 
-a {
-  white-space: nowrap;
-}
-
-.contact {
-  float: left;
-  font-size: em(20);
-  font-style: italic;
-  width: 74%;
-  line-height: em(30);
-  a {
-    color: $logo-gold;
-    margin-right: 8%;
-  }
-  a:hover .fa-solid {
-    position: relative;
-    -webkit-animation-name: shaker;
-    animation-name: shaker;
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-  }
-  .fa-solid {
-    color: $logo-green;
-  }
-}
-
-.socialIcons {
-  float: right;
-  font-size: em(40);
-  width: 25%;
-  text-align: right;
-  a {
-    margin-right: 3%;
-  }
-  a:nth-last-child(1) {
-    margin-right: 0;
-  }
-}
-
-.fa-facebook {
-  color: $logo-green;
-}
-.fa-facebook:hover {
-  color: $fb-blue;
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
-}
-
-.fa-instagram {
-  color: $logo-green;
-}
-.fa-instagram:hover {
-  color: $ig-rose;
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
-}
-
-.fa-t {
-  color: $logo-green;
-}
-.fa-t:hover {
-  color: $ta-green;
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
-}
-
-.floatWrapper {
+// Nastavenia hlavičky s kontaktom a sociálnymi sieťami
+//________________________________________________________________________
+.contact-social-flex {
+  @include flexing(row, nowrap, space-between, center);
   height: em(60);
-  padding: em(10) 2%;
+  padding: em(10) 2vw;
   border-bottom: 1px solid $logo-green;
+  .contact {
+    width: max-content;
+    font-size: em(20);
+    font-style: italic;
+    line-height: em(30);
+    a {
+      color: $logo-gold;
+    }
+    a:not(:last-child) {
+      margin-right: 2vw;
+    }
+    a:hover .fa-solid {
+      position: relative;
+      -webkit-animation-name: shaker;
+      animation-name: shaker;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+    }
+    .fa-solid {
+      color: $logo-green;
+    }
+    .fa-solid::after {
+      content: "\00a0 \00a0";
+    }
+  }
+  .socialIcons {
+    font-size: em(40);
+    width: max-content;
+    text-align: right;
+    a:not(:last-child) {
+      margin-right: 2vw;
+    }
+    .fa-facebook,
+    .fa-instagram,
+    .fa-t {
+      color: $logo-green;
+      transition: 1s;
+    }
+    .fa-facebook:hover,
+    .fa-instagram:hover,
+    .fa-t:hover {
+      -webkit-transition: 0.8s;
+      -o-transition: 0.8s;
+      transition: 0.8s;
+    }
+    .fa-facebook:hover {
+      color: $fb-blue;
+    }
+
+    .fa-instagram:hover {
+      color: $ig-rose;
+    }
+    .fa-t:hover {
+      color: $ta-green;
+    }
+  }
 }
 
-.floatWrapper,
-.floatWrapper::before,
-.floatWrapper::after {
-  clear: both;
-}
-
+// Nastavenia hlavnej časti headeru
+//________________________________________________________________________
 .mainHeader {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
+  @include flexing();
   overflow: hidden;
   a {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    img {
+      position: relative;
+      left: 1%;
+      height: em(200);
+      width: auto;
+      -webkit-animation-name: dynamic-entry;
+      animation-name: dynamic-entry;
+      -webkit-animation-duration: 5s;
+      animation-duration: 5s;
+    }
   }
-  img {
-    position: relative;
-    left: 1%;
-    height: em(200);
-    width: auto;
-    -webkit-animation-name: dynamic-entry;
-    animation-name: dynamic-entry;
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-  }
-  .wrapper {
+  .header-wrapper {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -144,105 +126,107 @@ a {
   }
 }
 
-h1 {
-  margin: 0;
-  padding-top: em(5);
-  font-size: em(80);
-  font-family: $hand-ff;
-  letter-spacing: 0.06em;
-  font-weight: 400;
-  text-shadow: 3px 5px 6px $logo-green;
+.header-wrapper {
+  h1 {
+    margin: 0;
+    padding-top: em(5);
+    font-size: em(80);
+    font-family: $hand-ff;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    text-shadow: 3px 5px 6px $logo-green;
+  }
+  .openingHours {
+    text-indent: 0;
+    list-style: none;
+    margin: em(30) auto;
+    padding-inline-start: 0;
+    li {
+      display: inline-block;
+      margin-left: 5%;
+      font-size: em(20);
+    }
+  }
+}
+
+// Nastavenia hlavných navigácii
+//________________________________________________________________________
+.menu-hlavne-menu-container {
+  width: max-content;
+  align-self: center;
+  padding-left: 2vw;
 }
 
 #mainNav {
-  margin-left: 5%;
-  width: 200px;
-  visibility: visible;
-  a {
-    width: 100%;
-    padding-right: 70%;
-  }
-  a:hover {
-    color: $logo-green;
-  }
-}
-
-#mainNav ul {
   padding: 0;
   margin: 0;
   list-style: none;
-  width: 100%;
+  line-height: em(25);
+  font-size: em(20);
+  width: 10vw;
+  min-width: 100px;
+  visibility: visible;
   li {
-    width: 100%;
-    line-height: em(25);
-    font-size: em(20);
-    margin-bottom: em(5);
-    padding: 0 5%;
     border-top: inset 2px;
     border-left: inset;
     border-color: $logo-green;
     border-radius: 10px 50px 0 15px;
+    max-width: 100%;
+    margin-bottom: em(5);
+    padding: 0 5%;
     overflow: hidden;
-    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    a {
+      width: 100%;
+      padding-right: 70%;
+    }
+    a:hover {
+      color: $logo-green;
+    }
   }
   li:hover {
     border-color: $logo-white;
   }
-  li:first-child {
-    margin-top: em(5);
-  }
+}
+
+.alt-menu {
+  display: none;
 }
 
 #altNav {
   display: none;
-  width: 100%;
+  width: 100vw;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  ul {
-    width: inherit;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    li {
-      display: block;
-      width: 15%;
-      padding-top: em(3);
-      line-height: em(30);
-      font-size: em(20);
-      text-align: center;
-      border-top: inset 2px;
-      border-left: inset 1px;
-      border-right: inset 1px;
-      border-radius: 50% 50% 0px 0;
-      border-color: $logo-green;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
-    }
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  li {
+    display: block;
+    width: 15%;
+    padding-top: em(3);
+    line-height: em(30);
+    font-size: em(20);
+    text-align: center;
+    border-top: inset 2px;
+    border-left: inset 1px;
+    border-right: inset 1px;
+    border-radius: 50% 50% 0px 0;
+    border-color: $logo-green;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
   }
 }
 
 #altNav a:hover {
   color: $logo-green;
 }
-
-#altNav ul .selected,
-#mainNav ul .selected {
-  border-color: $logo-white;
-}
-
-.openingHours {
-  text-indent: 0;
-  list-style: none;
-  margin: em(30) auto;
-  padding-inline-start: 0;
-  li {
-    display: inline-block;
-    margin-left: 5%;
-    font-size: em(20);
+#altNav .current_page_item,
+#mainNav .current_page_item {
+  border-color: $logo-brown;
+  a {
+    color: $logo-white;
   }
 }

@@ -8,7 +8,7 @@
                 <li><?php echo get_bloginfo('name') ?></li>
                 <li><?php echo get_theme_mod('address_street') ?></li>
                 <li><?php echo get_theme_mod('address_city') ?></li>
-                <li><a href="tel:<?php echo telephone_number(get_theme_mod('contact_tel')) ?>">
+                <li><a href="tel:<?php echo filter_telephone_number(get_theme_mod('contact_tel')) ?>">
                         <?php echo get_theme_mod('contact_tel') ?></a></li>
                 <li><a href="mailto:<?php echo get_theme_mod('contact_mail') ?>">
                         <?php echo get_theme_mod('contact_mail') ?></a></li>

@@ -20,14 +20,14 @@
 
     <header id="masthead" class="<?php echo esc_attr($wrapper_classes); ?>">
 
-        <div class="floatWrapper">
+        <div class="contact-social-flex">
             <div class="contact">
-                <a href="tel:<?php echo telephone_number(get_theme_mod('contact_tel')) ?>">
-                    <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;
+                <a href="tel:<?php echo filter_telephone_number(get_theme_mod('contact_tel')) ?>">
+                    <i class="fa-solid fa-phone"></i>
                     <?php echo get_theme_mod('contact_tel') ?></a>
 
                 <a href="mailto:<?php echo get_theme_mod('contact_mail') ?>">
-                    <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;
+                    <i class="fa-solid fa-envelope"></i>
                     <?php echo get_theme_mod('contact_mail') ?></a>
             </div>
             <div class="socialIcons">
@@ -42,20 +42,19 @@
             </div>
         </div>
 
-        <?php
-        $custom_logo_id = get_theme_mod('custom_logo');
-        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-        if (has_custom_logo()) {
-            echo    '<a class="site-logo" 
+        <section class="mainHeader">
+            <?php
+            $custom_logo_id = get_theme_mod('custom_logo');
+            $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+            if (has_custom_logo()) {
+                echo    '<a class="site-logo" 
         href="' . get_home_url() . '">
         <img src="' . esc_url($logo[0]) . '" 
         alt="' . get_bloginfo('name') . '">
         </a>';
-        }
-        ?>
-
-        <section class="mainHeader">
-            <div class="wrapper">
+            }
+            ?>
+            <div class="header-wrapper">
                 <h1><?php
                     $site_name = get_bloginfo('name');
                     $site_name .= '&nbsp';
@@ -70,19 +69,20 @@
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary',
-                'menu_class' => 'main-menu',
+                'menu_class' => 'main-menu-big',
                 'container' => 'nav',
                 'menu_id' => 'mainNav'
             )); ?>
         </section>
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'primary',
-            'menu_class' => 'main-menu',
-            'container' => 'nav',
-            'menu_id' => 'altNav'
-        ));
-        ?>
-
+        <nav class="alt-menu">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'menu_class' => 'main-menu-small',
+                'container' => false,
+                'menu_id' => 'altNav'
+            ));
+            ?>
+        </nav>
     </header><!-- #masthead -->
     <main id="main" class="site-main">
