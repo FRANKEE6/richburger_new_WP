@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-04 04:44:09+0000\n"
+"PO-Revision-Date: 2023-01-09 12:30:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1261,6 +1261,20 @@ msgstr "Nepodarilo sa odstrániť neplatný text."
 msgid "Could not retrieve table charset."
 msgstr "Nepodarilo sa načítať znakovú sadu tabuľky."
 
+#. translators: %s: Database fields where the error occurred.
+#: wp-includes/class-wpdb.php:2609
+msgid "WordPress database error: Processing the values for the following fields failed: %s. The supplied values may be too long or contain invalid data."
+msgstr "Chyba WordPress databázy: Spracovanie hodnôt pre nasledujúce polia zlyhalo: %s. Zadané hodnoty sú príliš dlhé alebo obsahujú neplatné údaje."
+
+#. translators: %s: Database field where the error occurred.
+#: wp-includes/class-wpdb.php:2603
+msgid "WordPress database error: Processing the value for the following field failed: %s. The supplied value may be too long or contains invalid data."
+msgstr "Chyba WordPress databázy: Spracovanie hodnoty pre nasledujúce pole zlyhalo: %s. Zadaná hodnota je príliš dlhá alebo obsahuje neplatné údaje."
+
+#: wp-includes/class-wpdb.php:2065
+msgid "WordPress database error: Could not perform query because it contains invalid data."
+msgstr "Chyba WordPress databázy: Dopyt sa nepodarilo vykonať, pretože obsahuje neplatné údaje."
+
 #: wp-includes/class-wp-taxonomy.php:611
 msgid "The description is not prominent by default; however, some themes may show it."
 msgstr "Popis nie je v zásade veľmi dôležitý; no niektoré témy ho môžu zobrazovať."
@@ -1501,6 +1515,20 @@ msgstr "Získať prelinkovaný objekt."
 msgid "The url is required when using a custom menu item type."
 msgstr "Pri použití vlastného typu položky menu sa vyžaduje URL adresa."
 
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:449
+msgid "The title is required when using a custom menu item type."
+msgstr "Pri použití vlastného typu položky menu sa vyžaduje nadpis."
+
+#. translators: %s: force=true
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:286
+msgid "Menu items do not support trashing. Set '%s' to delete."
+msgstr "Menu položky nie je možné presunúť do koša. Nastavte '%s' pre vymazanie."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:548
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:621
+msgid "Sorry, you are not allowed to access the global styles on this site."
+msgstr "Nemáte oprávnenie pre prístup ku globálnym štýlom na tejto webovej stránke."
+
 #: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:514
 msgid "Title for the global styles variation, as it exists in the database."
 msgstr "Názov varianty globálneho štýlu tak, ako je uložený v databáze."
@@ -1517,6 +1545,32 @@ msgstr "Globálne nastavenia."
 msgid "Global styles."
 msgstr "Globálne štýly."
 
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:492
+msgid "ID of global styles config."
+msgstr "Identifikátor konfigurácie globálnych štýlov."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:139
+msgid "No global styles config exist with that id."
+msgstr "Neexistuje konfigurácia globálnych štýlov s týmto identifikátorom."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:181
+msgid "Sorry, you are not allowed to view this global style."
+msgstr "Nemáte oprávnenie pre zobrazenie tohto globálneho štýlu."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:173
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:236
+msgid "Sorry, you are not allowed to edit this global style."
+msgstr "Nemáte oprávnenie upravovať tento globálny štýl."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:51
+#: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php:77
+msgid "The theme identifier"
+msgstr "Identifikátor témy"
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-edit-site-export-controller.php:62
+msgid "Sorry, you are not allowed to export templates and template parts."
+msgstr "Nemáte oprávnenie exportovať šablóny ani časti šablóny."
+
 #: wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php:578
 msgid "Public facing and editor style handles."
 msgstr "Referencie verejne dostupných štýlov a štýlov pre editor."
@@ -1524,6 +1578,10 @@ msgstr "Referencie verejne dostupných štýlov a štýlov pre editor."
 #: wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php:548
 msgid "Public facing and editor script handles."
 msgstr "Referencie verejne dostupných skriptov a skriptov pre editor."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-block-directory-controller.php:282
+msgid "The date when the block was last updated."
+msgstr "Dátum poslednej zmeny bloku."
 
 #: wp-includes/post.php:3152
 msgctxt "file type group"
@@ -1539,9 +1597,29 @@ msgstr "Audio"
 msgid "Navigation menus that can be inserted into your site."
 msgstr "Navigačné menu, ktoré je možné vložiť na vašu web stránku."
 
+#: wp-includes/post.php:502
+msgid "Navigation Menus list"
+msgstr "Zoznam navigačných menu"
+
+#: wp-includes/post.php:501
+msgid "Navigation Menus list navigation"
+msgstr "Navigácia pre zoznam navigačných menu"
+
+#: wp-includes/post.php:500
+msgid "Filter Navigation Menu list"
+msgstr "Filtrovať zoznam navigačných menu"
+
+#: wp-includes/post.php:499
+msgid "Uploaded to this Navigation Menu"
+msgstr "Nahrané ku tomuto navigačnému menu"
+
 #: wp-includes/post.php:498
 msgid "Insert into Navigation Menu"
 msgstr "Pridať do menu navigácie"
+
+#: wp-includes/post.php:497
+msgid "Navigation Menu archives"
+msgstr "Archívy navigačných menu"
 
 #: wp-includes/post.php:496
 msgid "No Navigation Menu found in Trash."
@@ -1550,6 +1628,14 @@ msgstr "V koši nebolo nájdené žiadne navigačné menu."
 #: wp-includes/post.php:495
 msgid "No Navigation Menu found."
 msgstr "Žiadne navigačné menu nebolo nájdené."
+
+#: wp-includes/post.php:494
+msgid "Parent Navigation Menu:"
+msgstr "Nadradené navigačné menu:"
+
+#: wp-includes/post.php:493
+msgid "Search Navigation Menus"
+msgstr "Nájsť navigačné menu"
 
 #: wp-includes/post.php:491
 msgid "View Navigation Menu"
@@ -1582,10 +1668,38 @@ msgctxt "post type general name"
 msgid "Navigation Menus"
 msgstr "Navigačné menu"
 
+#: wp-includes/post.php:457
+msgid "Global styles to include in themes."
+msgstr "Globálne štýly, ktoré sa majú zahrnúť do témy."
+
 #: wp-includes/post.php:456
 msgctxt "post type general name"
 msgid "Global Styles"
 msgstr "Globálne štýly"
+
+#: wp-includes/post.php:417
+msgid "Template parts to include in your templates."
+msgstr "Časti šablóny, ktoré chcete zahrnúť do vašej témy."
+
+#: wp-includes/post.php:415
+msgid "Template parts list"
+msgstr "Zoznam častí šablóny"
+
+#: wp-includes/post.php:414
+msgid "Template parts list navigation"
+msgstr "Navigácia zoznamu časti šablóny"
+
+#: wp-includes/post.php:413
+msgid "Filter template parts list"
+msgstr "Filtrovať zoznam častí šablóny"
+
+#: wp-includes/post.php:412
+msgid "Uploaded to this template part"
+msgstr "Nahrané do tejto časti šablóny"
+
+#: wp-includes/post.php:411
+msgid "Insert into template part"
+msgstr "Vložiť do časti šablóny"
 
 #: wp-includes/post.php:408
 msgid "No template parts found."

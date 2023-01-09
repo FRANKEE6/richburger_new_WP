@@ -85,4 +85,4 @@
             ?>
         </nav>
     </header><!-- #masthead -->
-    <main id="main" class="site-main">
+    <main id="main" class="site-main <?php add_page_slug()  ?>">

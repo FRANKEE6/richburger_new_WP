@@ -17,6 +17,16 @@ function filter_telephone_number($number)
     return $number;
 }
 
+// Zistenie a vypísanie slugu stránky
+function add_page_slug()
+{
+    global $post;
+    if (isset($post)) {
+        $page_slug = $post->post_name;
+    }
+    echo esc_attr($page_slug);
+}
+
 /**
  *  Shortcodes
  */
