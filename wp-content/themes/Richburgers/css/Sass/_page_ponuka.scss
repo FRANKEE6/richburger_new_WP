@@ -1,112 +1,114 @@
 // Nastavenie podstránky s ponukou
 //________________________________________________________________________
 
-.offer {
-  margin: 0 auto;
-  margin-bottom: em(10);
-  font-size: em(20);
-  margin: 0 auto;
-  nav {
+.ponuka {
+  .sticky-nav {
     position: sticky;
     top: 0;
-    margin: 0;
     z-index: 2;
-    width: 100%;
+    width: 100vw;
+    margin-left: -2.5vw;
+    padding-top: em(10);
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
-    ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      -ms-flex-line-pack: start;
-      align-content: flex-start;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      list-style: none;
+    background: $sticky-color;
+    border-top: 1px solid $banner-color;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    .is-layout-flex {
+      @include flexing(row, wrap, space-evenly, flex-start, flex-start);
       margin: 0;
       padding: 0;
-      background: $sticky-color;
-      border-top: 1px solid $banner-color;
-      border-bottom-left-radius: 25%;
-      border-bottom-right-radius: 25%;
+      padding-bottom: em(15);
     }
-    li {
-      display: inline-block;
-      margin: em(10, 20) 0.5% em(20, 20) 0.5%;
-      min-width: 120px;
-      max-width: 7%;
-      -ms-flex-negative: 0;
-      flex-shrink: 0;
-    }
-    button {
-      padding: em(5, 20) 10%;
-      width: 100%;
-      text-align: center;
-      border-radius: 50px;
-      border: 2px solid $banner-color;
-      -webkit-transition: 1s;
-      -o-transition: 1s;
-      transition: 1s;
-      background-image: $nav-gradient-button;
-      background-size: 200% auto;
-    }
-    button:hover {
-      cursor: pointer;
-      -webkit-transition: 1s;
-      -o-transition: 1s;
-      transition: 1s;
-      background-position: 95%;
-      -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1);
+    .wp-block-button {
+      a {
+        padding: em(5) 1vw;
+        text-align: center;
+        border-radius: 50px;
+        color: $header-background-color;
+        border: 2px solid $banner-color;
+        transition: 1s;
+        background-image: $nav-gradient-button;
+        background-size: 200% auto;
+      }
+      a:hover {
+        cursor: pointer;
+        transition: 1s;
+        background-position: 95%;
+        transform: scale(1.1);
+      }
     }
   }
-  .scrlup {
-    position: fixed;
-    display: block;
-    font-size: em(50, 20);
-    bottom: em(20, 20);
-    right: 3%;
-    -webkit-transition: color 1s;
-    -o-transition: color 1s;
-    transition: color 1s;
-    color: lighten($logo-green, 20%);
-    display: none;
-  }
-  .scrlup:hover {
-    cursor: pointer;
-    -webkit-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s;
-    color: $logo-green;
-  }
-
-  .mainContent {
-    width: 75%;
+  .main-content section:not(.sticky-nav) {
+    max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: em(80);
     h2 {
-      text-align: center;
       text-decoration: underline;
     }
+    .offer-info {
+      border-bottom: 3px solid $logo-brown;
+    }
+    .menu-item-block .wp-block-group__inner-container {
+      margin: em(25) 0;
+      .is-layout-flex {
+        @include flexing(row, nowrap, space-between);
+        border-bottom: 1px solid darken($logo-white, 10%);
+        p:first-of-type {
+          font-size: em(22);
+          font-weight: 700;
+        }
+      }
+      p {
+        margin: 0;
+      }
+      p:not(.is-layout-flex p) {
+        text-align: left;
+        text-indent: 20px;
+        font-size: em(15);
+        font-style: italic;
+      }
+      p:last-child:not(.is-layout-flex p:last-child) {
+        font-size: em(12);
+        opacity: 0.5;
+        line-height: normal;
+      }
+    }
+    .wp-block-column {
+      p {
+        margin: 0;
+      }
+      .is-layout-flex {
+        @include flexing(row, nowrap, space-between);
+        width: 95%;
+      }
+      .wp-block-group {
+        margin: em(13) 0;
+        p:first-of-type {
+          font-size: em(20);
+          font-weight: 700;
+        }
+        span {
+          font-size: em(12, 20);
+          opacity: 0.5;
+          line-height: normal;
+          font-style: italic;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  /*.mainContent {
     h2:last-of-type {
       text-decoration: none;
       a {
         color: $fb-blue;
       }
     }
-    p {
-      text-align: center;
-    }
     section dl {
-      padding-top: em(5);
-      border-top: 3px solid $logo-brown;
     }
     dt {
       font-weight: bold;
@@ -139,9 +141,29 @@
     h3 {
       text-align: center;
     }
-  }
+  }*/
 }
 
 .alergens {
   opacity: 0.7;
 }
+
+/*.scrlup {
+  position: fixed;
+  display: block;
+  font-size: em(50, 20);
+  bottom: em(20, 20);
+  right: 3%;
+  -webkit-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
+  color: lighten($logo-green, 20%);
+  display: none;
+}
+.scrlup:hover {
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  color: $logo-green;
+}*/
