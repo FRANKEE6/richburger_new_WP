@@ -629,49 +629,27 @@ header {
   padding: 0 0.7142857143em;
 }
 
-.ponuka {
-  /*.mainContent {
-    h2:last-of-type {
-      text-decoration: none;
-      a {
-        color: $fb-blue;
-      }
-    }
-    section dl {
-    }
-    dt {
-      font-weight: bold;
-      margin-bottom: em(11, 20);
-      margin-top: em(25, 20);
-      font-size: em(24, 20);
-      width: 100%;
-      position: relative;
-      border-bottom: 1px solid darken($logo-white, 10%);
-      span {
-        font-weight: normal;
-        font-size: em(17, 24);
-        display: inline-block;
-        position: absolute;
-        right: 0;
-      }
-    }
-    dd {
-      font-style: italic;
-      font-size: em(17, 20);
-      span {
-        opacity: 0.5;
-        font-size: em(15, 20);
-      }
-      span:before {
-        content: "\a";
-        white-space: pre;
-      }
-    }
-    h3 {
-      text-align: center;
-    }
-  }*/
+.scrlup {
+  position: fixed;
+  display: block;
+  font-size: 3.125em;
+  bottom: 1.25em;
+  right: 3%;
+  -webkit-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
+  color: #a7d487;
+  display: none;
 }
+
+.scrlup:hover {
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  color: #71b441;
+}
+
 .ponuka .sticky-nav {
   position: sticky;
   top: 0;
@@ -725,7 +703,11 @@ header {
   text-decoration: underline;
 }
 .ponuka .main-content section:not(.sticky-nav) .offer-info {
+  padding-bottom: 0.625em;
   border-bottom: 3px solid #7f4611;
+}
+.ponuka .main-content section:not(.sticky-nav) .offer-info p:last-child {
+  margin-bottom: 0;
 }
 .ponuka .main-content section:not(.sticky-nav) .menu-item-block .wp-block-group__inner-container {
   margin: 1.5625em 0;
@@ -759,6 +741,9 @@ header {
   opacity: 0.5;
   line-height: normal;
 }
+.ponuka .main-content section:not(.sticky-nav) .wp-block-column:first-of-type {
+  border-right: 1px solid #cfc9c9;
+}
 .ponuka .main-content section:not(.sticky-nav) .wp-block-column p {
   margin: 0;
 }
@@ -787,34 +772,62 @@ header {
   font-style: italic;
   font-weight: normal;
 }
+.ponuka .disclaimer {
+  text-align: center;
+  font-weight: 700;
+}
+.ponuka .disclaimer a {
+  color: #1a6ed8;
+}
 
-.alergens {
+.alergens .wp-block-buttons {
+  display: block;
+  margin: 0 auto;
+}
+.alergens .wp-block-button a {
+  padding: 0.3125em 1vw;
+  text-align: center;
+  border-radius: 50px;
+  color: #000;
+  border: none;
+  transition: 1s;
+  background-image: linear-gradient(to right, #71b441 0%, #e4df04 51%, #7f4611 100%);
+  background-size: 200% auto;
+}
+.alergens .wp-block-button a:hover {
+  cursor: pointer;
+  transition: 1s;
+  background-position: 95%;
+}
+.alergens ol {
+  opacity: 0.7;
+  text-align: left;
+}
+.alergens ol li {
+  margin-left: 5px;
+}
+
+.main-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: stretch;
+}
+.main-gallery figure {
+  padding: 7px;
+}
+.main-gallery img {
+  max-height: 350px;
   opacity: 0.7;
 }
-
-/*.scrlup {
-  position: fixed;
-  display: block;
-  font-size: em(50, 20);
-  bottom: em(20, 20);
-  right: 3%;
-  -webkit-transition: color 1s;
-  -o-transition: color 1s;
-  transition: color 1s;
-  color: lighten($logo-green, 20%);
-  display: none;
+.main-gallery img:hover {
+  opacity: 1;
 }
-.scrlup:hover {
-  cursor: pointer;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  color: $logo-green;
-}*/
-/*@import "css/Sass/_main_index.scss";
-@import "css/Sass/_main_gallery.scss";
-@import "css/Sass/_main_about.scss";
-*/
+
 footer {
   width: 100%;
   color: #e4df04;
@@ -855,24 +868,6 @@ footer a:hover {
   margin: 0;
   line-height: 1.5625em;
   white-space: nowrap;
-}
-.footer-flex .google-map {
-  max-width: 75%;
-}
-.footer-flex .google-map .mapouter,
-.footer-flex .google-map .gmap_canvas {
-  height: auto;
-  width: auto;
-  max-width: 1200px;
-  max-height: 400px;
-}
-.footer-flex .google-map .mapouter {
-  position: relative;
-  text-align: right;
-}
-.footer-flex .google-map .mapouter .gmap_canvas {
-  overflow: hidden;
-  background: none;
 }
 
 .copyright {

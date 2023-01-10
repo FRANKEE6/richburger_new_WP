@@ -31,6 +31,7 @@ function add_page_slug()
  *  Shortcodes
  */
 
+// Sekcia pre zobrazenie odkazov na sociálne siete
 add_shortcode('subsocial', 'subsocial_handler');
 function subsocial_handler()
 {
@@ -53,6 +54,15 @@ function subsocial_handler()
     $content .= '<i class="' . get_theme_mod('social_icon_3') . '"></i></a>';
 
     $content .= '</section>';
+
+    return apply_filters('the_content', $content);
+}
+
+// Pridá i element zobrazujúci scroll up button
+add_shortcode('scrollup', 'scrollup_button_handler');
+function scrollup_button_handler()
+{
+    $content = '<i class="fa-solid fa-angles-up scrlup"></i>';
 
     return apply_filters('the_content', $content);
 }

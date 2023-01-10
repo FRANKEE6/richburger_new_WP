@@ -82,3 +82,24 @@
     padding: 0 em(10, 14);
   }
 }
+
+// scroll up tlačítko
+.scrlup {
+  position: fixed;
+  display: block;
+  font-size: em(50);
+  bottom: em(20);
+  right: 3%;
+  -webkit-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
+  color: lighten($logo-green, 20%);
+  display: none;
+}
+.scrlup:hover {
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  color: $logo-green;
+}

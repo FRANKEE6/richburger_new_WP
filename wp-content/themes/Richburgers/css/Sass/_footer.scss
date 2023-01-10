@@ -35,26 +35,6 @@ footer {
       }
     }
   }
-
-  // Google mapa
-  .google-map {
-    max-width: 75%;
-    .mapouter,
-    .gmap_canvas {
-      height: auto;
-      width: auto;
-      max-width: 1200px;
-      max-height: 400px;
-    }
-    .mapouter {
-      position: relative;
-      text-align: right;
-      .gmap_canvas {
-        overflow: hidden;
-        background: none;
-      }
-    }
-  }
 }
 
 // Copyright section

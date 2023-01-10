@@ -1,0 +1,14 @@
+// Gallery _____________________________
+.main-gallery {
+  @include flexing(row, wrap, space-evenly, flex-start);
+  figure {
+    padding: 7px;
+  }
+  img {
+    max-height: 350px;
+    opacity: 0.7;
+  }
+  img:hover {
+    opacity: 1;
+  }
+}
