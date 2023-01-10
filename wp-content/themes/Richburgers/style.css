@@ -313,17 +313,16 @@ header {
   color: #e4df04;
 }
 
-/*.mainHeader:after {
-  content: "";
-  width: em(250);
-  height: em(200);
+.mainHeader .widget_media_image img {
+  max-height: 12.5em;
+  max-width: 15.625em;
+  height: auto;
+  width: auto;
   position: absolute;
+  border-top-left-radius: 75px;
+  border-bottom-left-radius: 75px;
   bottom: 0;
   right: 0;
-  background-image: url(../data/img/main/klasik_cut.png);
-  background-repeat: no-repeat;
-  background-size: em(250) em(200);
-  background-position: bottom right;
   opacity: 0;
   -webkit-animation-name: yummy;
   animation-name: yummy;
@@ -333,7 +332,8 @@ header {
   animation-duration: 4s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}*/
+}
+
 .contact-social-flex {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -15,9 +15,9 @@
         </section>
         <section class="google-map">
             <?php
-            if (is_active_sidebar('sidebar-2')) : ?>
+            if (is_active_sidebar('sidebar-3')) : ?>
                 <div class="widget-area" role="complementary">
-                    <?php dynamic_sidebar('sidebar-2'); ?>
+                    <?php dynamic_sidebar('sidebar-3'); ?>
                 </div>
             <?php endif; ?>
         </section>

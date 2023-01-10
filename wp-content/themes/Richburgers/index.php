@@ -1,7 +1,7 @@
 <?php
 get_header();
 
-if (is_front_page() && is_active_sidebar('sidebar-1')) : ?>
+if (is_front_page() && is_active_sidebar('sidebar-2')) : ?>
 
     <div class="frontpage-flex-wrapper">
         <section class="main-content">
@@ -9,7 +9,7 @@ if (is_front_page() && is_active_sidebar('sidebar-1')) : ?>
         </section>
         <aside class="side-content">
             <div class="widget-area" role="complementary">
-                <?php dynamic_sidebar('sidebar-1'); ?>
+                <?php dynamic_sidebar('sidebar-2'); ?>
             </div>
 
         </aside>
