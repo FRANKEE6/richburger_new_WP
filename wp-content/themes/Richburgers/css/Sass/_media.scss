@@ -1,33 +1,44 @@
-// Media queries ____________________________________________________________________________________________________
+// Media queries
+//________________________________________________________________________
 
-@media (max-width: 1570px) {
-  #mainNav {
-    margin-left: 1%;
-  }
-  .drive {
-    width: 80%;
-  }
-}
-
-@media (max-width: 1480px) {
-  #mainNav {
+@media (max-width: 1400px) {
+  .mainHeader .widget-area {
     display: none;
   }
-  #altNav {
+}
+
+@media (max-width: 1150px) {
+  .menu-hlavne-menu-container {
+    display: none;
+  }
+  .alt-menu {
     display: block;
   }
+}
+
+@media (max-width: 800px) {
+  body {
+    font-size: 75%;
+  }
   .mainHeader {
-    background-position: 1%;
+    display: block;
+    a {
+      display: block;
+      width: max-content;
+      margin: 0 auto;
+    }
+    .header-wrapper {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+      h1 {
+        margin: 0 auto;
+      }
+    }
   }
 }
 
-@media (max-width: 1410px) {
-  .reviews {
-    height: em(470);
-  }
-}
-
-@media (max-width: 1265px) {
+/*@media (max-width: 1265px) {
   footer {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -145,3 +156,4 @@
     }
   }
 }
+*/

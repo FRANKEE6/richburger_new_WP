@@ -57,7 +57,7 @@
             <div class="header-wrapper">
                 <h1><?php
                     $site_name = get_bloginfo('name');
-                    $site_name .= '&nbsp';
+                    $site_name .= ' ';
                     $site_name .= get_bloginfo('description');
                     echo $site_name;
                     ?></h1>
