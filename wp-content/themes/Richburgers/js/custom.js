@@ -73,7 +73,7 @@
                     nextone = $('<div class="next"/>'),
                     holder = $('<div id="holder"/>'),
                     lay = $('<div id="gallery-overlay"/>'),
-                    butout = $('<button id="butout"><i class="fa-solid fa-xmark"></i></button>');
+                    butout = $('<i id="butout" class="fa-solid fa-xmark"></i>');
                     
                 event.preventDefault();
                 
@@ -82,11 +82,11 @@
                     $('<i class="fa-solid fa-chevron-left"></i>').appendTo(previousone);
                     $('<i class="fa-solid fa-chevron-right"></i>').appendTo(nextone);
                     image.appendTo(holder);
-                    butout.appendTo(holder);
                     lay.html(holder).fadeIn(1000);
                     previousone.prependTo(lay);
                     nextone.appendTo(lay);
                     textarea.appendTo(lay);
+                    butout.appendTo(lay);
                 }
                 else {
                     $('#gallery-overlay').fadeIn(1000);

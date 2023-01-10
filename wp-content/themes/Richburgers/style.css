@@ -900,12 +900,14 @@ footer a:hover {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
+  flex-direction: row;
   flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 #gallery-overlay .previous,
 #gallery-overlay .next {
@@ -917,12 +919,11 @@ footer a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
+  align-content: stretch;
   font-size: 3.75em;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, #71b441 51%, rgba(0, 0, 0, 0.8) 100%);
   background-size: 200% auto;
@@ -959,75 +960,59 @@ footer a:hover {
   background-position: right center;
 }
 #gallery-overlay p {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
-  max-width: 80vw;
-  height: -webkit-max-content;
-  height: -moz-max-content;
+  max-width: 90vw;
   height: max-content;
-  font-size: 1.25em;
+  font-size: 1.125em;
+  margin: 0 0 0.3125em 0;
   padding: 0.3125em 1%;
-  line-height: 1.25em;
+  line-height: 1.125em;
   background: #e4df04;
   opacity: 0.9;
   border-radius: 8px;
 }
 
 #holder {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   margin: auto;
   margin-top: 2%;
   position: relative;
-  padding: 0 1%;
-  -ms-flex-negative: 2;
+  padding: 0 1vw;
   flex-shrink: 2;
 }
 #holder img {
   border: 5px solid white;
   border-radius: 5px;
-  max-width: 85vw;
-  max-height: 80vh;
+  max-width: 88vw;
+  max-height: 90vh;
 }
-#holder #butout {
-  width: 2em;
-  height: 2em;
-  font-size: 1em;
-  text-align: center;
-  line-height: 1.25em;
+
+#butout {
+  position: absolute;
+  top: 1vh;
+  right: 6vw;
+  width: 1.6875em;
+  height: 1.6875em;
+  font-size: 1.6875em;
+  line-height: 1.6875em;
   border-radius: 50%;
   display: block;
-  position: absolute;
-  margin-right: 9px;
-  top: -0.625em;
-  right: -0.625em;
   background-image: linear-gradient(to right, #bdc3c7 0%, #2c3e50 51%, #bdc3c7 100%);
   color: #fff;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
+  opacity: 0.7;
   transition: 0.5s;
   background-size: 200% auto;
-  -webkit-box-shadow: 0 0 10px #eee;
   box-shadow: 0 0 10px #eee;
   border: 1px solid #2c3e50;
 }
-#holder #butout:hover {
+
+#butout:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.4);
-  -ms-transform: scale(1.4);
-  transform: scale(1.4);
+  opacity: 1;
+  transform: scale(1.2);
   background-position: right center;
 }
 
