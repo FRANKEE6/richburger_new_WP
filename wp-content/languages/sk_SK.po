@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-09 12:30:30+0000\n"
+"PO-Revision-Date: 2023-01-11 08:01:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1323,6 +1323,11 @@ msgstr "Ľutujeme, nemáte povolené spracovávať vzdialené URL adresy."
 msgid "Invalid URL"
 msgstr "Neplatná URL"
 
+#. translators: 1: HTML meta tag, 2: HTML meta tag.
+#: wp-includes/rest-api/endpoints/class-wp-rest-url-details-controller.php:111
+msgid "The Open Graph image link of the %1$s or %2$s element from the URL."
+msgstr "Open Graph odkaz na obrázok elementu %1$s alebo %2$s z URL adresy."
+
 #. translators: %s: HTML meta tag.
 #: wp-includes/rest-api/endpoints/class-wp-rest-url-details-controller.php:101
 msgid "The content of the %s element from the URL."
@@ -1479,6 +1484,18 @@ msgstr "Jednotné číslo označenia používaného na opis tohto tejto položky
 msgid "The target attribute of the link element for this menu item."
 msgstr "Atribút target odkazu pre túto menu položku."
 
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:828
+msgid "The database ID of the original object this menu item represents, for example the ID for posts or the term_id for categories."
+msgstr "Databázový identifikátor pôvodného objektu, ktorý táto menu položka predstavuje, napríklad ID pre príspevky alebo term_id pre kategórie."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:819
+msgid "The type of object originally represented, such as \"category\", \"post\", or \"attachment\"."
+msgstr "Typ pôvodne reprezentovaného objektu, ako napr. \"category\" (kategória), \"post\" (príspevok) alebo \"attachment\" (príloha)."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:811
+msgid "The DB ID of the nav_menu_item that is this item's menu parent, if any, otherwise 0."
+msgstr "Databázový identifikátor nav_menu_item, ktorý je nadradený tejto menu položke, ak nejaký existuje, inak 0."
+
 #: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:802
 msgid "The description of this menu item."
 msgstr "Popis tejto menu položky."
@@ -1498,6 +1515,10 @@ msgstr "ID nadradeného objektu."
 #: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:763
 msgid "A named status for the object."
 msgstr "Pomenovaný stav objektu."
+
+#: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:755
+msgid "The family of objects originally represented, such as \"post_type\" or \"taxonomy\"."
+msgstr "Skupina pôvodne reprezentovaných objektov, ako napr. \"post_type\" (typ príspevku) alebo \"taxonomy\" (taxonómia)."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php:730
 msgid "HTML title for the object, transformed for display."
@@ -1701,9 +1722,21 @@ msgstr "Nahrané do tejto časti šablóny"
 msgid "Insert into template part"
 msgstr "Vložiť do časti šablóny"
 
+#: wp-includes/post.php:410
+msgid "Template part archives"
+msgstr "Archívy časti šablón"
+
+#: wp-includes/post.php:409
+msgid "No template parts found in Trash."
+msgstr "V koši neboli nájdené žiadne časti šablóny."
+
 #: wp-includes/post.php:408
 msgid "No template parts found."
 msgstr "Nenašli sa žiadne časti šablóny."
+
+#: wp-includes/post.php:407
+msgid "Parent Template Part:"
+msgstr "Nadradená časť šablóny:"
 
 #: wp-includes/post.php:406
 msgid "Search Template Parts"
@@ -1755,11 +1788,27 @@ msgctxt "post type general name"
 msgid "Templates"
 msgstr "Šablóny"
 
+#. translators: %s: Link to the login page.
+#: wp-includes/ms-functions.php:529 wp-includes/user.php:3348
+msgid "<strong>Error:</strong> This email address is already registered. <a href=\"%s\">Log in</a> with this address or choose another one."
+msgstr "<strong>Chyba:</strong> Táto emailová adresa je už zaregistrovaná. <a href=\"%s\">Prihláste sa</a> pomocou tejto adresy alebo zadajte inú."
+
 #: wp-includes/media.php:4602
 #: wp-admin/includes/class-wp-media-list-table.php:155
 msgctxt "media items"
 msgid "Unattached"
 msgstr "Nepriložené"
+
+#. translators: 1: Function name, 2: A variable type, like "boolean" or
+#. "integer".
+#: wp-includes/functions.php:8342
+msgid "%1$s only accepts a non-empty path string, received %2$s."
+msgstr "%1$s akceptuje len neprázdny textový reťazec, ktorý obsahuje cestu, no dostala %2$s."
+
+#. translators: 1: Path to the JSON file, 2: Error message.
+#: wp-includes/functions.php:4547
+msgid "Error when decoding a JSON file at path %1$s: %2$s"
+msgstr "Pri dekódovaní JSON súboru %1$s nastala chyba: %2$s"
 
 #. translators: %s: Path to the JSON file.
 #: wp-includes/functions.php:4533
@@ -1770,6 +1819,37 @@ msgstr "Súbor %s neexistuje!"
 #: wp-admin/includes/file.php:935
 msgid "Sorry, you are not allowed to upload this file type."
 msgstr "Nemáte oprávnenie nahrať súbor tohto typu."
+
+#. translators: 1: Option name, 2: Error code.
+#: wp-includes/formatting.php:4981
+msgid "Could not sanitize the %1$s option. Error code: %2$s"
+msgstr "Nastavenie %1$s sa nepodarilo prečistiť. Kód chyby: %2$s"
+
+#. translators: %s: URL to the themes page (also it activates the theme).
+#: wp-includes/customize/class-wp-customize-theme-control.php:267
+#: wp-admin/includes/theme.php:1018
+msgid "However, you can still <a href=\"%s\">activate this theme</a>, and use the Site Editor to customize it."
+msgstr "Stále však môžete <a href=\"%s\">túto tému aktivovať</a> a použiť Editor stránky na jej prispôsobenie."
+
+#: wp-includes/customize/class-wp-customize-theme-control.php:260
+#: wp-admin/includes/theme.php:1012
+msgid "This theme doesn't support Customizer."
+msgstr "Táto téma nepodporuje nástroj Prispôsobenie (Customizer)."
+
+#: wp-includes/comment.php:3604
+msgid "<strong>Error:</strong> Please fill the required fields."
+msgstr "<strong>Chyba:</strong> Vyplňte povinné polia."
+
+#: wp-includes/class-wp-block-styles-registry.php:85
+msgid "Block style name must not contain any spaces."
+msgstr "Názov štýlu bloku nesmie obsahovať žiadne medzery."
+
+#. translators: %s: Template part slug.
+#. translators: %s: Template part slug
+#: wp-includes/blocks/template-part.php:118
+#: wp-includes/js/dist/block-library.js:52758
+msgid "Template part has been deleted or is unavailable: %s"
+msgstr "Časť šablóny bola odstránená alebo je nedostupná: %s"
 
 #: wp-includes/blocks/post-navigation-link.php:64
 msgctxt "label before the title of the previous post"
@@ -1807,6 +1887,22 @@ msgstr "Otvoriť menu"
 msgid "%s submenu"
 msgstr "%s vnorené menu"
 
+#: wp-includes/blocks/navigation-link.php:282
+msgid "A link to a post format"
+msgstr "Odkaz na formát príspevku"
+
+#: wp-includes/blocks/navigation-link.php:281
+msgid "Post Format Link"
+msgstr "Odkaz na formát príspevku"
+
+#: wp-includes/blocks/calendar.php:22
+msgid "The calendar block is hidden because there are no published posts."
+msgstr "Blok Kalendár je skrytý, lebo sa nenašli žiadne zverejnené príspevky."
+
+#: wp-includes/block-template-utils.php:1212
+msgid "Unable to open export file (archive) for writing."
+msgstr "Súbor exportu (archív) nie je možné otvoriť na zapisovanie."
+
 #: wp-includes/block-template-utils.php:1203
 msgid "Zip Export not supported."
 msgstr "Export do Zip nie je podporovaný."
@@ -1820,35 +1916,68 @@ msgctxt "Template name"
 msgid "404"
 msgstr "404"
 
+#: wp-includes/block-template-utils.php:174
+msgid "Displays the privacy policy page."
+msgstr "Zobrazí stránku so zásadami ochrany osobných údajov."
+
 #: wp-includes/block-template-utils.php:169
 msgctxt "Template name"
 msgid "Search"
 msgstr "Vyhľadávanie"
+
+#: wp-includes/block-template-utils.php:166
+msgid "Displays individual media items or attachments."
+msgstr "Zobrazí jednotlivé mediálne položky alebo prílohy."
+
+#: wp-includes/block-template-utils.php:162
+msgid "Displays latest posts with a single post tag."
+msgstr "Zobrazí najnovšie príspevky pre konkrétnu značku."
 
 #: wp-includes/block-template-utils.php:161
 msgctxt "Template name"
 msgid "Tag"
 msgstr "Značka"
 
+#: wp-includes/block-template-utils.php:158
+msgid "Displays posts from a specific date."
+msgstr "Zobrazí príspevky pre konkrétny deň."
+
 #: wp-includes/block-template-utils.php:157
 msgctxt "Template name"
 msgid "Date"
 msgstr "Dátum"
+
+#: wp-includes/block-template-utils.php:154
+msgid "Displays latest posts from a single post taxonomy."
+msgstr "Zobrazí najnovšie príspevky pre konkrétnu taxonómiu."
 
 #: wp-includes/block-template-utils.php:153
 msgctxt "Template name"
 msgid "Taxonomy"
 msgstr "Taxonómia"
 
+#: wp-includes/block-template-utils.php:150
+msgid "Displays latest posts from a single post category."
+msgstr "Zobrazí najnovšie príspevky pre konkrétnu kategóriu."
+
 #: wp-includes/block-template-utils.php:149
 msgctxt "Template name"
 msgid "Category"
 msgstr "Kategória"
 
+#: wp-includes/block-template-utils.php:146
+#: wp-includes/js/dist/edit-site.js:14604
+msgid "Displays latest posts written by a single author."
+msgstr "Zobrazí najnovšie príspevky napísané konkrétnym autorom."
+
 #: wp-includes/block-template-utils.php:145
 msgctxt "Template name"
 msgid "Author"
 msgstr "Autor"
+
+#: wp-includes/block-template-utils.php:142
+msgid "Displays post categories, tags, and other archives."
+msgstr "Zobrazí kategórie príspevku, značky, prípadne iné archívy. "
 
 #: wp-includes/block-template-utils.php:141
 msgctxt "Template name"
@@ -2495,6 +2624,11 @@ msgstr "Rozdeľte váš obsah na viacero stránok."
 msgctxt "block keyword"
 msgid "read more"
 msgstr "čítať viac"
+
+#: wp-includes/blocks/more/block.json
+msgctxt "block description"
+msgid "Content before this block will be shown in the excerpt on your archives page."
+msgstr "Obsah pred týmto blokom sa bude zobrazovať v súhrne na vašej stránke pre archívy."
 
 #: wp-includes/blocks/missing/block.json
 msgctxt "block description"
@@ -5519,7 +5653,7 @@ msgstr "Či sa téma prihlási do UI tmavého editora."
 
 #: wp-includes/theme.php:4004
 msgid "Whether the theme enables Selective Refresh for Widgets being managed with the Customizer."
-msgstr "Či téma umožňuje selektívne obnovenie pre widgety spravované pomocou nástroja \"Prispôsobenie\"."
+msgstr "Či téma umožňuje selektívne obnovenie pre widgety spravované pomocou nástroja Prispôsobenie (Customizer)."
 
 #: wp-includes/theme.php:3971
 msgid "Custom logo if defined by the theme."
@@ -6677,7 +6811,7 @@ msgstr "Obmedziť výsledky na témy s priradeným jednym alebo viacerých stavo
 
 #: wp-includes/theme.php:4152
 msgid "Post formats supported."
-msgstr "Formáty článkov podporované."
+msgstr "Formáty príspevkov nie sú podporované."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-themes-controller.php:552
 msgid "Features supported by this theme."
@@ -8208,7 +8342,7 @@ msgstr "Odkaz na ukážku"
 
 #: wp-includes/class-wp-customize-manager.php:4352
 msgid "See how changes would look live on your website, and share the preview with people who can't access the Customizer."
-msgstr "Pozrite sa, ako by vaša webová stránka vyzerala so zmenami a zdieľajte ukážku s ľuďmi, ktorí nemajú prístup k nástroju možností prispôsobenia (Customizer)."
+msgstr "Pozrite sa, ako by vaša webová stránka vyzerala so zmenami a zdieľajte ukážku s ľuďmi, ktorí nemajú prístup k nástroju Prispôsobenie (Customizer)."
 
 #: wp-includes/class-wp-customize-manager.php:4350
 msgid "Share Preview Link"
@@ -8727,7 +8861,7 @@ msgstr "Id by malo začínať písmenom, pokračovať len písmenami, číslami,
 
 #: wp-includes/class-wp-customize-widgets.php:808
 msgid "You can navigate to other pages on your site while using the Customizer to view and edit the widgets displayed on those pages."
-msgstr "Počas používania možností prispôsobenia (Customizer) môžete prechádzať na ďalšie stránky a pritom sledovať a upravovať widgety zobrazované na týchto stránkach."
+msgstr "Počas používania nástroja Prispôsobenie (Customizer) môžete prechádzať na ďalšie stránky a pritom sledovať a upravovať widgety zobrazované na týchto stránkach."
 
 #. translators: %s: The total number of widget areas registered.
 #: wp-includes/class-wp-customize-widgets.php:784
@@ -10269,7 +10403,7 @@ msgstr "Stránky blogu zobrazujú najviac."
 
 #: wp-includes/option.php:2235
 msgid "Default post format."
-msgstr "Prednastavený formát článku."
+msgstr "Predvolený formát príspevku."
 
 #: wp-includes/option.php:2214
 msgid "Convert emoticons like :-) and :-P to graphics on display."
@@ -12383,7 +12517,7 @@ msgstr[2] "%1$s odpovedí na %2$s"
 
 #: wp-includes/theme.php:3635
 msgid "Customizer"
-msgstr "Prispôsobiť"
+msgstr "Prispôsobenie"
 
 #: wp-includes/taxonomy.php:4196
 msgid "Could not split shared term."

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-10 04:15:38+0000\n"
+"PO-Revision-Date: 2023-01-11 05:46:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,6 +43,10 @@ msgstr "Europe/Bratislava"
 msgid "Continue"
 msgstr "Pokračovať"
 
+#: wp-admin/includes/theme.php:335
+msgid "Site Editor"
+msgstr "Editor stránky"
+
 #. translators: 1: Learn WordPress link.
 #: wp-admin/about.php:549
 msgid "Explore <a href=\"%s\">learn.wordpress.org</a> for tutorial videos, online workshops, courses, and lesson plans for Meetup organizers, including new features in WordPress."
@@ -61,9 +65,29 @@ msgstr "<a href=\"%s\">Fluidná typografia</a> vám umožní určiť veľkosti p
 msgid "More responsive text with fluid typography"
 msgstr "Responzívnejší text pomocou fluidnej typografie"
 
+#: wp-admin/about.php:509
+msgid "Combine it with block locking options for even more advanced control over your blocks."
+msgstr "Skombinujte to s možnosťami zamykania blokov pre ešte pokročilejšiu kontrolu nad vašimi blokmi."
+
 #: wp-admin/about.php:466
 msgid "Performance highlights"
 msgstr "Zlepšenie výkonu"
+
+#: wp-admin/about.php:445
+msgid "Spacing presets for faster, consistent design"
+msgstr "Prednastavené rozstupy pre rýchlejší a konzistentný dizajn"
+
+#: wp-admin/about.php:364
+msgid "Continued evolution of layout options"
+msgstr "Pokračujúci vývoj možností rozloženia"
+
+#: wp-admin/about.php:346
+msgid "Updated interface options and features"
+msgstr "Aktualizované možnosti a funkcie rozhrania"
+
+#: wp-admin/about.php:283
+msgid "A streamlined style system"
+msgstr "Zjednodušený systém štýlovania"
 
 #: wp-admin/about.php:244
 msgid "Find block themes faster"
