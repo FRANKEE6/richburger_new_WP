@@ -1,36 +1,40 @@
-/**
- * File responsive-embeds.js.
- *
- * Make embeds responsive so they don't overflow their container.
- */
+(function ($) {   
+    $(document).ready(function () {
 
-/**
- * Add max-width & max-height to <iframe> elements, depending on their width & height props.
- *
- * @since Twenty Twenty-One 1.0
- *
- * @return {void}
- */
-function twentytwentyoneResponsiveEmbeds() {
-	var proportion, parentWidth;
+		function richburgerResponsiveEmbeds(){
+			var footerHeight, proportion, parentWidth;
 
-	// Loop iframe elements.
-	document.querySelectorAll( 'iframe' ).forEach( function( iframe ) {
-		// Only continue if the iframe has a width & height defined.
-		if ( iframe.width && iframe.height ) {
-			// Calculate the proportion/ratio based on the width & height.
-			proportion = parseFloat( iframe.width ) / parseFloat( iframe.height );
-			// Get the parent element's width.
-			parentWidth = parseFloat( window.getComputedStyle( iframe.parentElement, null ).width.replace( 'px', '' ) );
-			// Set the max-width & height.
-			iframe.style.maxWidth = '100%';
-			iframe.style.maxHeight = Math.round( parentWidth / proportion ).toString() + 'px';
+			$('iframe').each(function(index, value){
+
+				var iframeWidth = $(this).attr('width'),
+					iframeHeight = $(this).attr('height');
+
+				if (iframeWidth > 0 && iframeHeight > 0){
+					footerHeight = $('.footer-flex').height();
+
+					// Calculate the proportion/ratio based on the width & height.
+					proportion = iframeWidth / iframeHeight;
+
+					// Get the parent element's width.
+					parentWidth = $(this).parent().parent().width();
+
+					// Set the max-width & height.
+					$(this).css('maxWidth', parentWidth + 'px');
+					$(this).css('maxHeight', (parentWidth / proportion) + 'px');
+
+					console.log(parentWidth);
+					console.log(index);
+				}
+			});
 		}
-	} );
-}
 
-// Run on initial load.
-twentytwentyoneResponsiveEmbeds();
+		// Run on initial load.
+		richburgerResponsiveEmbeds();
 
-// Run on resize.
-window.onresize = twentytwentyoneResponsiveEmbeds;
+		// Run on resize.
+		$(window).resize(function(){
+			richburgerResponsiveEmbeds();
+		});
+
+	});
+})(jQuery);

@@ -15,12 +15,12 @@ footer {
 // Footer main content
 .footer-flex {
   @include flexing(row, nowrap, space-between, center);
+  width: 100%;
   .address {
-    flex-shrink: 0;
     margin-left: 1vw;
     padding-right: 1vw;
-    min-width: 280px;
-    max-width: 20%;
+    min-width: 270px;
+    width: 28%;
     ul {
       list-style: none;
       min-width: max-content;
@@ -35,6 +35,10 @@ footer {
         white-space: nowrap;
       }
     }
+  }
+  .google-map {
+    max-height: 400px;
+    width: 68%;
   }
 }
 
