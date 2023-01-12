@@ -42,6 +42,17 @@
       }
     }
   }
+  .frontpage-flex-wrapper {
+    display: block;
+    .main-content {
+      width: 100%;
+    }
+    .side-content {
+      width: 100%;
+      padding-left: 0;
+      margin: em(20) auto 0 auto;
+    }
+  }
   .ponuka {
     .wp-block-columns {
       display: block;
@@ -54,5 +65,11 @@
     .address {
       min-width: 220px;
     }
+    .google-map {
+      max-width: 330px;
+    }
   }
+}
+
+@media (max-width: 576px) {
 }

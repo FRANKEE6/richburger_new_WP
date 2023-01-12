@@ -1025,6 +1025,17 @@ footer a:hover {
   .mainHeader .header-wrapper h1 {
     margin: 0 auto;
   }
+  .frontpage-flex-wrapper {
+    display: block;
+  }
+  .frontpage-flex-wrapper .main-content {
+    width: 100%;
+  }
+  .frontpage-flex-wrapper .side-content {
+    width: 100%;
+    padding-left: 0;
+    margin: 1.25em auto 0 auto;
+  }
   .ponuka .wp-block-columns {
     display: block;
   }
@@ -1033,5 +1044,8 @@ footer a:hover {
   }
   .footer-flex .address {
     min-width: 220px;
+  }
+  .footer-flex .google-map {
+    max-width: 330px;
   }
 }

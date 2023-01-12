@@ -21,9 +21,6 @@
 					// Set the max-width & height.
 					$(this).css('maxWidth', parentWidth + 'px');
 					$(this).css('maxHeight', (parentWidth / proportion) + 'px');
-
-					console.log(parentWidth);
-					console.log(index);
 				}
 			});
 		}
