@@ -1,5 +1,16 @@
 (function ($) {   
     $(document).ready(function () {
+        // Funkcia pre identifikáciu desktop zariadení ________________________________
+        function isDesktopDevice(){
+            let actDevWidth = $('body, html').width();
+
+            if (actDevWidth >= 781.1 ){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
 
         // Animácie ___________________________________________________________________
         // Animácie navigácie 
@@ -24,7 +35,7 @@
         
         // Tooltip mesagge __________________________________________________________________
 
-        if ($('.galeria').length){
+        if ($('.galeria').length && isDesktopDevice()){
 
             var ttipholder = $('#tooltip'),
                 collection = $(".main-gallery img");
@@ -181,18 +192,20 @@
 
             $(alergenlist).hide();
 
-            alergenalert.on("mouseenter", function(){
-                if($(this).attr("title")) return;
-                $(this).attr("title", " ");
+            if (isDesktopDevice()){
+                alergenalert.on("mouseenter", function(){
+                    if($(this).attr("title")) return;
+                    $(this).attr("title", " ");
 
-                var that = $(this);
+                    var that = $(this);
 
-                $(alergenlist).each(function(index){;
-                    if($(that).text().search(index + 1) !== -1){
-                        $(that).attr("title", $(that).attr("title") + "\n" + $(alergenlist[index]).text().trim());
-                    }
+                    $(alergenlist).each(function(index){;
+                        if($(that).text().search(index + 1) !== -1){
+                            $(that).attr("title", $(that).attr("title") + "\n" + $(alergenlist[index]).text().trim());
+                        }
+                    });
                 });
-            });
+            }
         }
         
         // Offer scroll functions __________________________________________

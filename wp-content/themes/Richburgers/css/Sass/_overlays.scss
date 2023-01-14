@@ -15,7 +15,6 @@
   .previous,
   .next {
     -ms-flex-negative: 0;
-    flex-shrink: 0;
     width: 5vw;
     height: 100vh;
     opacity: 0.8;
@@ -72,11 +71,9 @@
 }
 
 #holder {
-  margin: auto;
-  margin-top: 2%;
-  position: relative;
+  @include flexing(column, nowrap, center, center);
+  height: 100vw;
   padding: 0 1vw;
-  flex-shrink: 2;
   img {
     border: 5px solid white;
     border-radius: 5px;

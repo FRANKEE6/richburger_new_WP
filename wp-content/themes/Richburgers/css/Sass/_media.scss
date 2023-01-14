@@ -60,6 +60,20 @@
     .main-content section:not(.sticky-nav) .wp-block-column:first-of-type {
       border-right: none;
     }
+    .dressings .wp-block-column h4:not(.first-of-type) {
+      margin-top: em(50);
+    }
+  }
+  .main-gallery img {
+    opacity: 1;
+  }
+  #gallery-overlay {
+    .previous:hover,
+    .next:hover {
+      .fa-solid {
+        transform: none;
+      }
+    }
   }
   .footer-flex {
     .address {
@@ -71,5 +85,80 @@
   }
 }
 
+@media (max-width: 600px) {
+  #tooltip p {
+    width: 44.5vw;
+  }
+}
 @media (max-width: 576px) {
+  .mainHeader {
+    max-width: 96vw;
+    margin: 0 auto;
+  }
+  #altNav li {
+    margin-left: 2.5vw;
+  }
+  #gallery-overlay {
+    .previous,
+    .next {
+      font-size: em(40);
+    }
+  }
+  .footer-flex {
+    display: block;
+    .address {
+      width: max-content;
+      padding-right: 0;
+      margin: 0 auto;
+      ul {
+        border-left: none;
+        margin-top: 0;
+        padding-left: 0;
+        li {
+          width: auto;
+          text-align: center;
+          line-height: em(19);
+        }
+        li:nth-child(3) {
+          margin-bottom: em(6);
+        }
+      }
+    }
+    .google-map {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .contact-social-flex {
+    display: block;
+    height: max-content;
+    .contact {
+      width: 100%;
+      @include flexing(column-reverse, nowrap, center, center);
+      a:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+    .socialIcons {
+      width: 50%;
+      margin: 1vw auto 0 auto;
+      @include flexing(row, nowrap, space-around, center);
+    }
+  }
+  .header-wrapper {
+    h1 {
+      font-size: em(60);
+    }
+    .openingHours {
+      margin: em(15) auto;
+    }
+  }
+  #altNav {
+    justify-content: space-around;
+    li {
+      margin-left: 0;
+    }
+  }
 }
