@@ -1029,6 +1029,63 @@ footer a:hover {
   .mainHeader .header-wrapper h1 {
     margin: 0 auto;
   }
+  .contact-social-flex .contact a:hover {
+    animation-name: unset;
+    animation-duration: unset;
+  }
+  .contact-social-flex .socialIcons .fa-facebook:hover,
+.contact-social-flex .socialIcons .fa-instagram:hover,
+.contact-social-flex .socialIcons .fa-t:hover {
+    transition: unset;
+  }
+  .contact-social-flex .socialIcons .fa-facebook:hover {
+    color: #71b441;
+  }
+  .contact-social-flex .socialIcons .fa-instagram:hover {
+    color: #71b441;
+  }
+  .contact-social-flex .socialIcons .fa-t:hover {
+    color: #71b441;
+  }
+  .subsocial a .fa-facebook:hover,
+.subsocial a .fa-instagram:hover,
+.subsocial a .fa-t:hover {
+    transform: unset;
+    rotate: unset;
+  }
+  .subsocial a .fa-facebook:hover {
+    color: #71b441;
+  }
+  .subsocial a .fa-instagram:hover {
+    color: #71b441;
+  }
+  .subsocial a .fa-t:hover {
+    color: #71b441;
+  }
+  footer a:hover {
+    color: #e4df04;
+  }
+  #gallery-overlay .previous:hover .fa-solid,
+#gallery-overlay .next:hover .fa-solid {
+    transform: unset;
+  }
+  #gallery-overlay .previous:hover {
+    background-position: right center;
+  }
+  #gallery-overlay .next:hover {
+    background-position: unset;
+  }
+  #butout:hover {
+    transform: unset;
+    background-position: unset;
+  }
+  .ponuka .sticky-nav .wp-block-button a:hover {
+    transform: unset;
+    background-position: unset;
+  }
+  .alergens .wp-block-button a:hover {
+    background-position: unset;
+  }
   .frontpage-flex-wrapper {
     display: block;
   }

@@ -42,6 +42,75 @@
       }
     }
   }
+  // Unset hover effects
+  .contact-social-flex {
+    .contact a:hover {
+      animation-name: unset;
+      animation-duration: unset;
+    }
+    .socialIcons {
+      .fa-facebook:hover,
+      .fa-instagram:hover,
+      .fa-t:hover {
+        transition: unset;
+      }
+      .fa-facebook:hover {
+        color: $logo-green;
+      }
+      .fa-instagram:hover {
+        color: $logo-green;
+      }
+      .fa-t:hover {
+        color: $logo-green;
+      }
+    }
+  }
+  .subsocial a {
+    .fa-facebook:hover,
+    .fa-instagram:hover,
+    .fa-t:hover {
+      transform: unset;
+      rotate: unset;
+    }
+    .fa-facebook:hover {
+      color: $logo-green;
+    }
+    .fa-instagram:hover {
+      color: $logo-green;
+    }
+    .fa-t:hover {
+      color: $logo-green;
+    }
+  }
+  footer a:hover {
+    color: $logo-gold;
+  }
+  #gallery-overlay {
+    .previous:hover,
+    .next:hover {
+      .fa-solid {
+        transform: unset;
+      }
+    }
+    .previous:hover {
+      background-position: right center;
+    }
+    .next:hover {
+      background-position: unset;
+    }
+  }
+  #butout:hover {
+    transform: unset;
+    background-position: unset;
+  }
+  .ponuka .sticky-nav .wp-block-button a:hover {
+    transform: unset;
+    background-position: unset;
+  }
+  .alergens .wp-block-button a:hover {
+    background-position: unset;
+  }
+
   .frontpage-flex-wrapper {
     display: block;
     .main-content {
