@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-13 13:15:51+0000\n"
+"PO-Revision-Date: 2023-01-15 15:48:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1305,11 +1305,11 @@ msgstr "Názov, ktorý sa zobrazí na vašej stránke."
 
 #: wp-includes/taxonomy.php:215
 msgid "Template Part Area"
-msgstr "Oblasť pre umestnene časti šablóny"
+msgstr "Oblasť pre umestnenie časti šablóny"
 
 #: wp-includes/taxonomy.php:214
 msgid "Template Part Areas"
-msgstr "Oblasti pre umestnene časti šablóny"
+msgstr "Oblasti pre umestnenie časti šablóny"
 
 #: wp-includes/script-loader.php:951
 msgid "The server cannot process the image. This can happen if the server is busy or does not have enough resources to complete the task. Uploading a smaller image may help. Suggested maximum size is 2560 pixels."
@@ -1409,7 +1409,7 @@ msgstr "Typ obsahu, pre ktorý sa majú načítať šablóny."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:797
 msgid "Limit to the specified template part area."
-msgstr "Obmedziť pre oblasť špeicifkovanej časti šablóny."
+msgstr "Obmedziť pre oblasť špecifikovanej časti šablóny."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-taxonomies-controller.php:389
 msgid "REST namespace route for the taxonomy."
@@ -3028,7 +3028,7 @@ msgstr "%1$s alebo %2$s"
 
 #: wp-includes/user.php:359
 msgid "<strong>Error:</strong> Unknown username. Check again or try your email address."
-msgstr "<strong>Chyba:</strong> Neznáme používateľské meno. Skontrolujte ho znova, alebo skúste svoje e-mailovú adresu."
+msgstr "<strong>Chyba:</strong> Neznáme používateľské meno. Skontrolujte ho znova, alebo skúste svoju e-mailovú adresu."
 
 #: wp-includes/user.php:354
 msgid "<strong>Error:</strong> Unknown email address. Check again or try your username."
