@@ -248,14 +248,17 @@ Version:      0.01
   0% {
     color: #71b441;
     box-shadow: 0 0 0 0 rgba(0, 175, 135, 0.7);
+    background-color: rgba(0, 175, 135, 0.4);
   }
   70% {
     color: rgb(0, 175, 135);
     box-shadow: 0 0 0 10px rgba(0, 175, 135, 0);
+    background-color: rgba(0, 175, 135, 0);
   }
   100% {
     color: #71b441;
     box-shadow: 0 0 0 0 rgba(0, 175, 135, 0);
+    background-color: rgba(0, 175, 135, 0);
   }
 }
 @keyframes breathe {
@@ -263,6 +266,9 @@ Version:      0.01
     color: #e4df04;
   }
   25% {
+    color: #e4df04;
+  }
+  50% {
     color: #71b441;
   }
   75% {
@@ -270,6 +276,41 @@ Version:      0.01
   }
   100% {
     color: #e4df04;
+  }
+}
+@keyframes show-off {
+  0% {
+    transform: translate(0%, 50%);
+  }
+  5% {
+    transform: scale(1.45, 0.6) translate(0%, 110%);
+  }
+  10% {
+    transform: scale(0.9, 1.1) translate(0%, 20%);
+  }
+  20% {
+    transform: scale(1, 1) translate(0%, -60%);
+  }
+  40% {
+    transform: scale(1.25, 0.75) translate(0%, -90%);
+  }
+  50% {
+    transform: scale(1.1, 0.9) translate(0%, -70%);
+  }
+  55% {
+    transform: scale(1.1, 0.9) translate(0%, 55%);
+  }
+  62% {
+    transform: scale(1.3, 0.7) translate(0%, 85%);
+  }
+  75% {
+    transform: scale(0.9, 1.1) translate(0%, 35%);
+  }
+  86% {
+    transform: scale(1.15, 0.85) translate(0%, 65%);
+  }
+  100% {
+    transform: scale(1, 1) translate(0%, 50%);
   }
 }
 *,
@@ -590,7 +631,7 @@ header {
   font-size: 4.375em;
 }
 .subsocial a {
-  padding: 0 6%;
+  margin: 0 6%;
 }
 .subsocial a .fa-facebook,
 .subsocial a .fa-instagram,
@@ -1172,6 +1213,27 @@ footer a:hover {
   #gallery-overlay .previous:hover .fa-solid,
 #gallery-overlay .next:hover .fa-solid {
     transform: none;
+  }
+  .subsocial a .fa-facebook,
+.subsocial a .fa-instagram,
+.subsocial a .fa-t {
+    animation-name: show-off;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .subsocial a .fa-facebook {
+    color: rgb(26, 110, 216);
+    animation-duration: 2s;
+  }
+  .subsocial a .fa-instagram {
+    color: rgb(225, 48, 108);
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+  }
+  .subsocial a .fa-t {
+    color: rgb(0, 175, 135);
+    animation-duration: 2.5s;
+    animation-delay: 1s;
   }
   .footer-flex .address {
     min-width: 220px;

@@ -144,6 +144,29 @@
       }
     }
   }
+  .subsocial a {
+    .fa-facebook,
+    .fa-instagram,
+    .fa-t {
+      animation-name: show-off;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .fa-facebook {
+      color: $fb-blue;
+      animation-duration: 2s;
+    }
+    .fa-instagram {
+      color: $ig-rose;
+      animation-duration: 1.5s;
+      animation-delay: 0.5s;
+    }
+    .fa-t {
+      color: $ta-green;
+      animation-duration: 2.5s;
+      animation-delay: 1s;
+    }
+  }
   .footer-flex {
     .address {
       min-width: 220px;
