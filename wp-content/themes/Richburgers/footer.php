@@ -29,7 +29,7 @@
                 <?php echo get_theme_mod('copy_text') ?>
             </span>
         </p>
-        <p class="site-creator">Kontak na tvorcu stránky <a href="mailto:marcel.urban@centrum.sk">TU</p>
+        <p class="site-creator">Kontak na tvorcu stránky <a href="mailto:marcel.urban@centrum.sk">TU</a></p>
     </section>
 </footer><!-- #colophon -->
 
