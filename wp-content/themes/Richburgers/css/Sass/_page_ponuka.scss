@@ -23,8 +23,10 @@
       padding-bottom: em(15);
     }
     .wp-block-button {
+      width: auto;
       a {
-        padding: em(5) 1vw;
+        width: 100%;
+        padding: em(5) 1.5vw;
         text-align: center;
         border-radius: 50px;
         color: $header-background-color;

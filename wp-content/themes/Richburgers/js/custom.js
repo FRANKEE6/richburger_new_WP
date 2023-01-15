@@ -32,6 +32,61 @@
                 $(altElementy).css({"animationName": "none"});
             }, delay);
         })(window);
+
+        // Animácie pre dotykové zariadenia
+        if (!isDesktopDevice()){
+            var contactIcons = $('.contact-social-flex .contact a .fa-solid'),
+                socialIcons = $('.contact-social-flex .socialIcons i'),
+                footerLinks = $('.footer-flex .address ul li a');
+
+            $(contactIcons).each(function(index){
+                let startDelay = (index * 2.5) + 's';
+
+                $(this).css({
+                    "animation-name": "shaker",
+                    "animation-duration": "5s",
+                    "animation-iteration-count": "infinite",
+                    "animation-delay": startDelay
+                });
+            })
+
+            $(socialIcons).each(function(index){
+                let iconClass = $(this).attr('class'),
+                    startDelay = (index * 2) + "s",
+                    displayColor = "",
+                    animationColorSlug = "";
+
+                switch (iconClass){
+                    case "fa-brands fa-facebook":
+                        displayColor = "rgba(26, 110, 216, 1)";
+                        animationColorSlug = "FB";
+                        break;
+                    case "fa-brands fa-instagram":
+                        displayColor = "rgba(225, 48, 108, 1)";
+                        animationColorSlug = "IG";
+                        break;
+                    case "fa-solid fa-t":
+                        displayColor = "rgba(0, 175, 135, 1)";
+                        animationColorSlug = "TA";
+                        break;
+                }
+                
+                $(this).css({
+                    "box-shadow": "0 0 0 0 " + displayColor,
+                    "border-radius": "50%",
+                    "animation-name": "pulse-" + animationColorSlug,
+                    "animation-duration": "6s",
+                    "animation-delay": startDelay,
+                    "animation-iteration-count": "infinite"
+                });
+            });
+
+            $(footerLinks).css({
+                "animation-name": "breathe",
+                "animation-duration": "5s",
+                "animation-iteration-count": "infinite"
+            });
+        }
         
         // Tooltip mesagge __________________________________________________________________
 
@@ -187,7 +242,20 @@
                 alergenbutton = $(alergensection).find('a');
 
             $(alergenbutton).on('click', function(){
-                $(alergenlist).toggle();
+                if(isDesktopDevice()){
+                    $(alergenlist).toggle();
+                }
+                else {
+                    if ($(alergenlist).css("display") == "none"){
+                        $(alergenbutton).css({"background-position": "95%"});
+                        $(alergenlist).slideToggle(200, function(){});
+                    }
+                    else {
+                        $(alergenbutton).css({"background-position": "0%"});
+                        $(alergenlist).slideToggle(200, function(){});
+                    }
+                }
+                
             });
 
             $(alergenlist).hide();
@@ -232,7 +300,7 @@
 
         // Offer scrolls
         
-        var buttons = $(".sticky-nav .wp-block-button a"),
+        var buttons = $(".sticky-nav .wp-block-button"),
             sections = $(".ponuka h3");
 
         $(buttons).on("click", function(event){
@@ -244,6 +312,59 @@
             
             $("html, body").animate({scrollTop: (scrlposition - stickyheight - 25)}, 500);
         });
-        
+
+        // Offer buttons zmena pozadia podľa scrollovanej pozície
+
+        if(!isDesktopDevice() && $('.ponuka').length){
+            $(window).on('scroll', function(){
+                let actualScrlPosition = $(window).scrollTop();
+
+                $(sections).each(function(){
+
+                    let thisOffset = $(this).offset().top,
+                        thisID = $(this).attr('ID');
+                    
+                    if (thisOffset < actualScrlPosition) {
+                        $(buttons).find("a[href='#"+ thisID +"']").css({
+                            "background-position": "95%"
+                        });
+                    }
+                    else {
+                        $(buttons).find("a[href='#"+ thisID +"']").css({
+                            "background-position": "5%"
+                        });
+                    }
+                })
+            })
+        }
+
+        // Offer buttons rovnaká šírka podľa najširšieho
+        var buttonContainers = $(".sticky-nav .wp-block-button");
+
+        if ($(buttonContainers).length){
+
+            function resizeStickyButtons(){
+                var currentWidest = 0;
+
+                $(buttonContainers).each(function(){
+
+                    let currentElementWidth = $(this).width();
+
+                    if (currentElementWidth >= currentWidest){
+                        currentWidest = currentElementWidth;
+                    }
+                    else return;
+
+                })
+                $(buttonContainers).css({
+                    "min-width": currentWidest + 'px'
+                });
+            }
+            resizeStickyButtons();
+
+            $(window).resize(function(){
+                resizeStickyButtons();
+            });
+        }
     });
 })(jQuery);

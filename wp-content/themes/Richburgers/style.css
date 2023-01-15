@@ -216,6 +216,62 @@ Version:      0.01
     opacity: 1;
   }
 }
+@keyframes pulse-FB {
+  0% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(26, 110, 216, 0.7);
+  }
+  70% {
+    color: rgb(26, 110, 216);
+    box-shadow: 0 0 0 10px rgba(26, 110, 216, 0);
+  }
+  100% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(26, 110, 216, 0);
+  }
+}
+@keyframes pulse-IG {
+  0% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.7);
+  }
+  70% {
+    color: rgb(225, 48, 108);
+    box-shadow: 0 0 0 10px rgba(225, 48, 108, 0);
+  }
+  100% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(225, 48, 108, 0);
+  }
+}
+@keyframes pulse-TA {
+  0% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(0, 175, 135, 0.7);
+  }
+  70% {
+    color: rgb(0, 175, 135);
+    box-shadow: 0 0 0 10px rgba(0, 175, 135, 0);
+  }
+  100% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(0, 175, 135, 0);
+  }
+}
+@keyframes breathe {
+  0% {
+    color: #e4df04;
+  }
+  25% {
+    color: #71b441;
+  }
+  75% {
+    color: #71b441;
+  }
+  100% {
+    color: #e4df04;
+  }
+}
 *,
 *::before,
 *::after {
@@ -341,13 +397,13 @@ header {
   transition: 0.8s;
 }
 .contact-social-flex .socialIcons .fa-facebook:hover {
-  color: #1a6ed8;
+  color: rgb(26, 110, 216);
 }
 .contact-social-flex .socialIcons .fa-instagram:hover {
-  color: #e1306c;
+  color: rgb(225, 48, 108);
 }
 .contact-social-flex .socialIcons .fa-t:hover {
-  color: #00af87;
+  color: rgb(0, 175, 135);
 }
 
 .mainHeader {
@@ -551,13 +607,13 @@ header {
   rotate: 360deg;
 }
 .subsocial a .fa-facebook:hover {
-  color: #1a6ed8;
+  color: rgb(26, 110, 216);
 }
 .subsocial a .fa-instagram:hover {
-  color: #e1306c;
+  color: rgb(225, 48, 108);
 }
 .subsocial a .fa-t:hover {
-  color: #00af87;
+  color: rgb(0, 175, 135);
 }
 
 .gdpr-section {
@@ -625,8 +681,12 @@ header {
   padding: 0;
   padding-bottom: 0.9375em;
 }
+.ponuka .sticky-nav .wp-block-button {
+  width: auto;
+}
 .ponuka .sticky-nav .wp-block-button a {
-  padding: 0.3125em 1vw;
+  width: 100%;
+  padding: 0.3125em 1.5vw;
   text-align: center;
   border-radius: 50px;
   color: #000;
@@ -728,7 +788,7 @@ header {
   font-weight: 700;
 }
 .ponuka .disclaimer a {
-  color: #1a6ed8;
+  color: rgb(26, 110, 216);
 }
 
 .alergens .wp-block-buttons {
