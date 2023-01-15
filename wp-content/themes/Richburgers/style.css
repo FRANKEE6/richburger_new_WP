@@ -11,56 +11,38 @@ Version:      0.01
   }
   10% {
     top: -4px;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   20% {
     top: -4px;
-    -webkit-transform: rotate(25deg);
-    -ms-transform: rotate(25deg);
     transform: rotate(25deg);
   }
   30% {
     top: -4px;
-    -webkit-transform: rotate(-25deg);
-    -ms-transform: rotate(-25deg);
     transform: rotate(-25deg);
   }
   40% {
     top: -4px;
-    -webkit-transform: rotate(25deg);
-    -ms-transform: rotate(25deg);
     transform: rotate(25deg);
   }
   50% {
     top: -4px;
-    -webkit-transform: rotate(-25deg);
-    -ms-transform: rotate(-25deg);
     transform: rotate(-25deg);
   }
   60% {
     top: -4px;
-    -webkit-transform: rotate(25deg);
-    -ms-transform: rotate(25deg);
     transform: rotate(25deg);
   }
   70% {
     top: -4px;
-    -webkit-transform: rotate(-25deg);
-    -ms-transform: rotate(-25deg);
     transform: rotate(-25deg);
   }
   80% {
     top: -4px;
-    -webkit-transform: rotate(25deg);
-    -ms-transform: rotate(25deg);
     transform: rotate(25deg);
   }
   90% {
     top: -4px;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
@@ -73,47 +55,38 @@ Version:      0.01
   }
   10% {
     top: -4px;
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   20% {
     top: -4px;
-    -webkit-transform: rotate(25deg);
     transform: rotate(25deg);
   }
   30% {
     top: -4px;
-    -webkit-transform: rotate(-25deg);
     transform: rotate(-25deg);
   }
   40% {
     top: -4px;
-    -webkit-transform: rotate(25deg);
     transform: rotate(25deg);
   }
   50% {
     top: -4px;
-    -webkit-transform: rotate(-25deg);
     transform: rotate(-25deg);
   }
   60% {
     top: -4px;
-    -webkit-transform: rotate(25deg);
     transform: rotate(25deg);
   }
   70% {
     top: -4px;
-    -webkit-transform: rotate(-25deg);
     transform: rotate(-25deg);
   }
   80% {
     top: -4px;
-    -webkit-transform: rotate(25deg);
     transform: rotate(25deg);
   }
   90% {
     top: -4px;
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
@@ -123,44 +96,36 @@ Version:      0.01
 @-webkit-keyframes dynamic-entry {
   from {
     left: -300px;
-    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
   15% {
     left: 1%;
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   25% {
     left: 1%;
-    -webkit-transform: rotate(-3600deg);
     transform: rotate(-3600deg);
   }
   to {
     left: 1%;
-    -webkit-transform: rotate(-3600deg);
     transform: rotate(-3600deg);
   }
 }
 @keyframes dynamic-entry {
   from {
     left: -300px;
-    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
   15% {
     left: 1%;
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   25% {
     left: 1%;
-    -webkit-transform: rotate(-3600deg);
     transform: rotate(-3600deg);
   }
   to {
     left: 1%;
-    -webkit-transform: rotate(-3600deg);
     transform: rotate(-3600deg);
   }
 }
@@ -216,6 +181,20 @@ Version:      0.01
     opacity: 1;
   }
 }
+@-webkit-keyframes pulse-FB {
+  0% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(26, 110, 216, 0.7);
+  }
+  70% {
+    color: rgb(26, 110, 216);
+    box-shadow: 0 0 0 10px rgba(26, 110, 216, 0);
+  }
+  100% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(26, 110, 216, 0);
+  }
+}
 @keyframes pulse-FB {
   0% {
     color: #71b441;
@@ -230,6 +209,20 @@ Version:      0.01
     box-shadow: 0 0 0 0 rgba(26, 110, 216, 0);
   }
 }
+@-webkit-keyframes pulse-IG {
+  0% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.7);
+  }
+  70% {
+    color: rgb(225, 48, 108);
+    box-shadow: 0 0 0 10px rgba(225, 48, 108, 0);
+  }
+  100% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(225, 48, 108, 0);
+  }
+}
 @keyframes pulse-IG {
   0% {
     color: #71b441;
@@ -242,6 +235,23 @@ Version:      0.01
   100% {
     color: #71b441;
     box-shadow: 0 0 0 0 rgba(225, 48, 108, 0);
+  }
+}
+@-webkit-keyframes pulse-TA {
+  0% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(0, 175, 135, 0.7);
+    background-color: rgba(0, 175, 135, 0.4);
+  }
+  70% {
+    color: rgb(0, 175, 135);
+    box-shadow: 0 0 0 10px rgba(0, 175, 135, 0);
+    background-color: rgba(0, 175, 135, 0);
+  }
+  100% {
+    color: #71b441;
+    box-shadow: 0 0 0 0 rgba(0, 175, 135, 0);
+    background-color: rgba(0, 175, 135, 0);
   }
 }
 @keyframes pulse-TA {
@@ -261,6 +271,23 @@ Version:      0.01
     background-color: rgba(0, 175, 135, 0);
   }
 }
+@-webkit-keyframes breathe {
+  0% {
+    color: #e4df04;
+  }
+  25% {
+    color: #e4df04;
+  }
+  50% {
+    color: #71b441;
+  }
+  75% {
+    color: #71b441;
+  }
+  100% {
+    color: #e4df04;
+  }
+}
 @keyframes breathe {
   0% {
     color: #e4df04;
@@ -276,6 +303,41 @@ Version:      0.01
   }
   100% {
     color: #e4df04;
+  }
+}
+@-webkit-keyframes show-off {
+  0% {
+    transform: translate(0%, 50%);
+  }
+  5% {
+    transform: scale(1.45, 0.6) translate(0%, 110%);
+  }
+  10% {
+    transform: scale(0.9, 1.1) translate(0%, 20%);
+  }
+  20% {
+    transform: scale(1, 1) translate(0%, -60%);
+  }
+  40% {
+    transform: scale(1.25, 0.75) translate(0%, -90%);
+  }
+  50% {
+    transform: scale(1.1, 0.9) translate(0%, -70%);
+  }
+  55% {
+    transform: scale(1.1, 0.9) translate(0%, 55%);
+  }
+  62% {
+    transform: scale(1.3, 0.7) translate(0%, 85%);
+  }
+  75% {
+    transform: scale(0.9, 1.1) translate(0%, 35%);
+  }
+  86% {
+    transform: scale(1.15, 0.85) translate(0%, 65%);
+  }
+  100% {
+    transform: scale(1, 1) translate(0%, 50%);
   }
 }
 @keyframes show-off {
@@ -316,7 +378,6 @@ Version:      0.01
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -379,8 +440,6 @@ header {
 }
 
 .contact-social-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -392,6 +451,8 @@ header {
   border-bottom: 1px solid #71b441;
 }
 .contact-social-flex .contact {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   font-size: 1.25em;
   font-style: italic;
@@ -418,6 +479,8 @@ header {
 }
 .contact-social-flex .socialIcons {
   font-size: 2.5em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   text-align: right;
 }
@@ -433,8 +496,6 @@ header {
 .contact-social-flex .socialIcons .fa-facebook:hover,
 .contact-social-flex .socialIcons .fa-instagram:hover,
 .contact-social-flex .socialIcons .fa-t:hover {
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
   transition: 0.8s;
 }
 .contact-social-flex .socialIcons .fa-facebook:hover {
@@ -449,8 +510,6 @@ header {
 
 .mainHeader {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -495,6 +554,7 @@ header {
   text-indent: 0;
   list-style: none;
   margin: 1.875em auto;
+  -webkit-padding-start: 0;
   padding-inline-start: 0;
 }
 .header-wrapper .openingHours li {
@@ -504,6 +564,8 @@ header {
 }
 
 .menu-hlavne-menu-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   align-self: center;
   padding-left: 2vw;
@@ -528,6 +590,7 @@ header {
   margin-bottom: 0.3125em;
   padding: 0 5%;
   overflow: hidden;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 #mainNav li a {
@@ -610,8 +673,6 @@ header {
 }
 
 .frontpage-flex-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -642,8 +703,6 @@ header {
 .subsocial a .fa-facebook:hover,
 .subsocial a .fa-instagram:hover,
 .subsocial a .fa-t:hover {
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
   transform: scale(1.6);
   rotate: 360deg;
 }
@@ -679,8 +738,6 @@ header {
   font-size: 3.125em;
   bottom: 1.25em;
   right: 3%;
-  -webkit-transition: color 1s;
-  -o-transition: color 1s;
   transition: color 1s;
   color: #a7d487;
   display: none;
@@ -688,8 +745,6 @@ header {
 
 .scrlup:hover {
   cursor: pointer;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
   color: #71b441;
 }
@@ -710,8 +765,6 @@ header {
   border-bottom-right-radius: 25%;
 }
 .ponuka .sticky-nav .is-layout-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -761,8 +814,6 @@ header {
   margin: 1.5625em 0;
 }
 .ponuka .main-content section:not(.sticky-nav) .menu-item-block .wp-block-group__inner-container .is-layout-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -797,8 +848,6 @@ header {
   text-align: left;
 }
 .ponuka .main-content section:not(.sticky-nav) .wp-block-column .is-layout-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -860,8 +909,6 @@ header {
 }
 
 .main-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -884,6 +931,8 @@ footer {
   width: 100%;
   color: #e4df04;
   background-color: #000;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   padding: 0.625em 1vw;
 }
@@ -892,8 +941,6 @@ footer a:hover {
 }
 
 .footer-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -910,6 +957,8 @@ footer a:hover {
 }
 .footer-flex .address ul {
   list-style: none;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
   min-width: max-content;
   border-left: 3px solid #303224;
   padding-left: 1vw;
@@ -917,6 +966,8 @@ footer a:hover {
 }
 .footer-flex .address ul li {
   display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   margin: 0;
   line-height: 1.5625em;
@@ -956,9 +1007,6 @@ footer a:hover {
   background: rgba(0, 0, 0, 0.8);
   z-index: 20;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: row;
@@ -973,8 +1021,6 @@ footer a:hover {
   width: 5vw;
   height: 100vh;
   opacity: 0.8;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -984,16 +1030,12 @@ footer a:hover {
   font-size: 3.75em;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, #71b441 51%, rgba(0, 0, 0, 0.8) 100%);
   background-size: 200% auto;
-  -webkit-transition: 2s;
-  -o-transition: 2s;
   transition: 2s;
 }
 #gallery-overlay .previous .fa-solid,
 #gallery-overlay .next .fa-solid {
   color: #e4df04;
   opacity: 0.5;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 #gallery-overlay .previous {
@@ -1005,8 +1047,6 @@ footer a:hover {
 }
 #gallery-overlay .previous:hover .fa-solid,
 #gallery-overlay .next:hover .fa-solid {
-  -webkit-transform: scale(1.4);
-  -ms-transform: scale(1.4);
   transform: scale(1.4);
   opacity: 0.9;
 }
@@ -1021,8 +1061,12 @@ footer a:hover {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   max-width: 90vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   font-size: 1.125em;
   margin: 0 0 0.3125em 0;
@@ -1034,8 +1078,6 @@ footer a:hover {
 }
 
 #holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -1120,6 +1162,8 @@ footer a:hover {
   }
   .mainHeader a {
     display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin: 0 auto;
   }
@@ -1132,7 +1176,9 @@ footer a:hover {
     margin: 0 auto;
   }
   .contact-social-flex .contact a:hover {
+    -webkit-animation-name: unset;
     animation-name: unset;
+    -webkit-animation-duration: unset;
     animation-duration: unset;
   }
   .contact-social-flex .socialIcons .fa-facebook:hover,
@@ -1218,22 +1264,30 @@ footer a:hover {
   .subsocial a .fa-facebook,
 .subsocial a .fa-instagram,
 .subsocial a .fa-t {
+    -webkit-animation-name: show-off;
     animation-name: show-off;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
   }
   .subsocial a .fa-facebook {
     color: rgb(26, 110, 216);
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
   }
   .subsocial a .fa-instagram {
     color: rgb(225, 48, 108);
+    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
   }
   .subsocial a .fa-t {
     color: rgb(0, 175, 135);
+    -webkit-animation-duration: 2.5s;
     animation-duration: 2.5s;
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
   }
   .footer-flex .address {
@@ -1264,6 +1318,8 @@ footer a:hover {
     display: block;
   }
   .footer-flex .address {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     padding-right: 0;
     margin: 0 auto;
@@ -1289,12 +1345,12 @@ footer a:hover {
 @media (max-width: 450px) {
   .contact-social-flex {
     display: block;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
   .contact-social-flex .contact {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: nowrap;
@@ -1308,8 +1364,6 @@ footer a:hover {
   .contact-social-flex .socialIcons {
     width: 50%;
     margin: 1vw auto 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

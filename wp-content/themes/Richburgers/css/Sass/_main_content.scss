@@ -49,8 +49,6 @@
     .fa-facebook:hover,
     .fa-instagram:hover,
     .fa-t:hover {
-      -webkit-transform: scale(1.6);
-      -ms-transform: scale(1.6);
       transform: scale(1.6);
       rotate: 360deg;
     }
@@ -90,16 +88,12 @@
   font-size: em(50);
   bottom: em(20);
   right: 3%;
-  -webkit-transition: color 1s;
-  -o-transition: color 1s;
   transition: color 1s;
   color: lighten($logo-green, 20%);
   display: none;
 }
 .scrlup:hover {
   cursor: pointer;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
   color: $logo-green;
 }

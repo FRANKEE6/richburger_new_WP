@@ -40,6 +40,8 @@ header {
   padding: em(10) 2vw;
   border-bottom: 1px solid $logo-green;
   .contact {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     font-size: em(20);
     font-style: italic;
@@ -66,6 +68,8 @@ header {
   }
   .socialIcons {
     font-size: em(40);
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     text-align: right;
     a:not(:last-child) {
@@ -80,8 +84,6 @@ header {
     .fa-facebook:hover,
     .fa-instagram:hover,
     .fa-t:hover {
-      -webkit-transition: 0.8s;
-      -o-transition: 0.8s;
       transition: 0.8s;
     }
     .fa-facebook:hover {
@@ -140,6 +142,7 @@ header {
     text-indent: 0;
     list-style: none;
     margin: em(30) auto;
+    -webkit-padding-start: 0;
     padding-inline-start: 0;
     li {
       display: inline-block;
@@ -152,6 +155,8 @@ header {
 // Nastavenia hlavných navigácii
 //________________________________________________________________________
 .menu-hlavne-menu-container {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   align-self: center;
   padding-left: 2vw;
@@ -175,6 +180,7 @@ header {
     margin-bottom: em(5);
     padding: 0 5%;
     overflow: hidden;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
     a {
       width: 100%;

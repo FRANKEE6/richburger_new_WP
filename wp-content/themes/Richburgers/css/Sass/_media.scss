@@ -30,6 +30,8 @@
     display: block;
     a {
       display: block;
+      width: -webkit-max-content;
+      width: -moz-max-content;
       width: max-content;
       margin: 0 auto;
     }
@@ -45,7 +47,9 @@
   // Unset hover effects
   .contact-social-flex {
     .contact a:hover {
+      -webkit-animation-name: unset;
       animation-name: unset;
+      -webkit-animation-duration: unset;
       animation-duration: unset;
     }
     .socialIcons {
@@ -148,22 +152,30 @@
     .fa-facebook,
     .fa-instagram,
     .fa-t {
+      -webkit-animation-name: show-off;
       animation-name: show-off;
+      -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
       animation-timing-function: linear;
     }
     .fa-facebook {
       color: $fb-blue;
+      -webkit-animation-duration: 2s;
       animation-duration: 2s;
     }
     .fa-instagram {
       color: $ig-rose;
+      -webkit-animation-duration: 1.5s;
       animation-duration: 1.5s;
+      -webkit-animation-delay: 0.5s;
       animation-delay: 0.5s;
     }
     .fa-t {
       color: $ta-green;
+      -webkit-animation-duration: 2.5s;
       animation-duration: 2.5s;
+      -webkit-animation-delay: 1s;
       animation-delay: 1s;
     }
   }
@@ -199,6 +211,8 @@
   .footer-flex {
     display: block;
     .address {
+      width: -webkit-max-content;
+      width: -moz-max-content;
       width: max-content;
       padding-right: 0;
       margin: 0 auto;
@@ -225,6 +239,8 @@
 @media (max-width: 450px) {
   .contact-social-flex {
     display: block;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     .contact {
       width: 100%;

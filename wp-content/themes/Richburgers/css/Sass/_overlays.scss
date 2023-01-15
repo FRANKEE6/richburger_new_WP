@@ -9,7 +9,6 @@
   background: $overlay-background;
   z-index: 20;
   text-align: center;
-  display: -webkit-box;
   display: -ms-flexbox;
   @include flexing(row, nowrap, space-between, center, center);
   .previous,
@@ -22,14 +21,10 @@
     font-size: em(60);
     background: $overlay-gradient-banner;
     background-size: 200% auto;
-    -webkit-transition: 2s;
-    -o-transition: 2s;
     transition: 2s;
     .fa-solid {
       color: $logo-gold;
       opacity: 0.5;
-      -webkit-transition: 1s;
-      -o-transition: 1s;
       transition: 1s;
     }
   }
@@ -40,8 +35,6 @@
   .next:hover {
     cursor: pointer;
     .fa-solid {
-      -webkit-transform: scale(1.4);
-      -ms-transform: scale(1.4);
       transform: scale(1.4);
       opacity: 0.9;
     }
@@ -57,8 +50,12 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     max-width: 90vw;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     font-size: em(18);
     margin: 0 0 em(5) 0;
