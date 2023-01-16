@@ -3,7 +3,7 @@
 Theme Name:   Richburgers
 Description:  Richburgers original theme
 Author:       FRANKEE
-Version:      0.03
+Version:      0.04
 */
 @-webkit-keyframes shaker {
   from {
@@ -413,6 +413,10 @@ a {
 #cmplz-document {
   margin: 0 auto;
   text-align: left;
+}
+
+.page-excerpt {
+  display: none;
 }
 
 header {
