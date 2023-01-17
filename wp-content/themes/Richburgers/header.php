@@ -50,7 +50,8 @@
                 echo    '<a class="site-logo" 
         href="' . get_home_url() . '">
         <img src="' . esc_url($logo[0]) . '" 
-        alt="' . get_bloginfo('name') . '">
+        alt="' . get_bloginfo('name') . '"
+        width="200" height="200">
         </a>';
             }
             ?>
