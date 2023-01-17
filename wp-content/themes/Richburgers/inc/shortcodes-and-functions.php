@@ -42,15 +42,18 @@ function subsocial_handler()
     $content = '<section class="subsocial">';
 
     $content .= '<a href="' . get_theme_mod('social_url_1') . '"';
-    $content .= "$blankage>";
+    $content .= $blankage;
+    $content .= ' aria-label="Odkaz na sociálnu sieť">';
     $content .= '<i class="' . get_theme_mod('social_icon_1') . '"></i></a>';
 
     $content .= '<a href="' . get_theme_mod('social_url_2') . '"';
-    $content .= "$blankage>";
+    $content .= $blankage;
+    $content .= ' aria-label="Odkaz na sociálnu sieť">';
     $content .= '<i class="' . get_theme_mod('social_icon_2') . '"></i></a>';
 
     $content .= '<a href="' . get_theme_mod('social_url_3') . '"';
-    $content .= "$blankage>";
+    $content .= $blankage;
+    $content .= ' aria-label="Odkaz na sociálnu sieť">';
     $content .= '<i class="' . get_theme_mod('social_icon_3') . '"></i></a>';
 
     $content .= '</section>';

@@ -31,13 +31,13 @@
                     <?php echo get_theme_mod('contact_mail') ?></a>
             </div>
             <div class="socialIcons">
-                <a href="<?php echo get_theme_mod('social_url_1') ?>" <?php if (get_theme_mod('blank_option')) echo 'target="_blank"'; ?>>
+                <a href="<?php echo get_theme_mod('social_url_1') ?>" <?php if (get_theme_mod('blank_option')) echo 'target="_blank"'; ?> aria-label="Odkaz na sociálnu sieť">
                     <i class="<?php echo get_theme_mod('social_icon_1') ?>"></i></a>
 
-                <a href="<?php echo get_theme_mod('social_url_2') ?>" <?php if (get_theme_mod('blank_option')) echo 'target="_blank"'; ?>>
+                <a href="<?php echo get_theme_mod('social_url_2') ?>" <?php if (get_theme_mod('blank_option')) echo 'target="_blank"'; ?> aria-label="Odkaz na sociálnu sieť">
                     <i class="<?php echo get_theme_mod('social_icon_2') ?>"></i></a>
 
-                <a href="<?php echo get_theme_mod('social_url_3') ?>" <?php if (get_theme_mod('blank_option')) echo 'target="_blank"'; ?>>
+                <a href="<?php echo get_theme_mod('social_url_3') ?>" <?php if (get_theme_mod('blank_option')) echo 'target="_blank"'; ?> aria-label="Odkaz na sociálnu sieť">
                     <i class="<?php echo get_theme_mod('social_icon_3') ?>"></i></a>
             </div>
         </div>
