@@ -14,24 +14,27 @@
 
         // Animácie ___________________________________________________________________
         // Animácie navigácie 
-        (function(){
-            var mainElementy = $("#mainNav li"),
-                altElementy = $("#altNav li");
 
-            $.each(mainElementy, (function(index) {
-                $(this).hide().delay( 250 + index * 40).show(1200).css({"animationName": "flyBaby"});
-            }));
+        if($('.home').length){
+            (function(){
+                var mainElementy = $("#mainNav li"),
+                    altElementy = $("#altNav li");
 
-            $.each(altElementy, (function(index) {
-                $(this).hide().delay( 250 + index * 40).show(1000).css({"animationName": "flyBaby"});
-            }));
+                $.each(mainElementy, (function(index) {
+                    $(this).hide().delay( 250 + index * 40).show(1200).css({"animationName": "flyBaby"});
+                }));
 
-            var delay = 6000;
-            setTimeout(() => {
-                $(mainElementy).css({"animationName": "none"});
-                $(altElementy).css({"animationName": "none"});
-            }, delay);
-        })(window);
+                $.each(altElementy, (function(index) {
+                    $(this).hide().delay( 250 + index * 40).show(1000).css({"animationName": "flyBaby"});
+                }));
+
+                var delay = 6000;
+                setTimeout(() => {
+                    $(mainElementy).css({"animationName": "none"});
+                    $(altElementy).css({"animationName": "none"});
+                }, delay);
+            })(window);
+        }
 
         // Animácie pre dotykové zariadenia
         if (!isDesktopDevice()){
