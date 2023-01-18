@@ -245,6 +245,7 @@
     .contact {
       width: 100%;
       @include flexing(column-reverse, nowrap, center, center);
+      font-size: em(20, 12);
       a:not(:last-child) {
         margin-right: 0;
       }
@@ -255,9 +256,14 @@
       @include flexing(row, nowrap, space-around, center);
     }
   }
+  .mainHeader a img {
+    width: 100px;
+    height: 100px;
+  }
+
   .header-wrapper {
     h1 {
-      font-size: em(60);
+      font-size: em(50);
     }
     .openingHours {
       margin: em(15) auto;
@@ -266,7 +272,18 @@
   #altNav {
     justify-content: space-around;
     li {
+      width: 20%;
       margin-left: 0;
+    }
+  }
+
+  .footer-flex .address ul li {
+    a {
+      display: inline-block;
+      font-size: em(14, 12);
+    }
+    a:last-of-type {
+      margin-top: em(2.5);
     }
   }
 }

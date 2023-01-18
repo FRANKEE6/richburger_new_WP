@@ -69,3 +69,16 @@ function scrollup_button_handler()
 
     return apply_filters('the_content', $content);
 }
+
+
+// Pridá pravý button element (nie anchor náhradu) s predurčenou rolo zobraz/skry
+add_shortcode('show_hide_button', 'show_hide_button_handler');
+function show_hide_button_handler()
+{
+    $button = '<button type="button" id="show-hide-button" ';
+    $button .= 'aria-pressed="false" aria-expanded="false">';
+    $button .= 'zobraz/skry zoznam alergénov';
+    $button .= '</button>';
+
+    return apply_filters('the_content', $button);
+}

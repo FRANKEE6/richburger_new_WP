@@ -242,9 +242,23 @@
 
             let alergenlist = $(".alergens ol li"),
                 alergenalert = $(".alergen-info"),
-                alergenbutton = $(alergensection).find('a');
+                alergenbutton = $(alergensection).find('#show-hide-button');
 
             $(alergenbutton).on('click', function(){
+                let buttonStatus = $(alergenbutton).attr('aria-pressed');
+
+                if ( buttonStatus == 'true' ){
+                    $(alergenbutton).attr({
+                        "aria-pressed": "false",
+                        "aria-expanded": "false"
+                    });
+                }
+                else {
+                    $(alergenbutton).attr({
+                        "aria-pressed": "true",
+                        "aria-expanded": "true"
+                    });
+                }
                 if(isDesktopDevice()){
                     $(alergenlist).toggle();
                 }
@@ -258,7 +272,6 @@
                         $(alergenlist).slideToggle(200, function(){});
                     }
                 }
-                
             });
 
             $(alergenlist).hide();

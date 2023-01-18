@@ -3,7 +3,7 @@
 Theme Name:   Richburgers
 Description:  Richburgers original theme
 Author:       FRANKEE
-Version:      0.06
+Version:      0.07
 */
 @-webkit-keyframes shaker {
   from {
@@ -797,12 +797,7 @@ header {
   color: #000;
   border: 2px solid #303224;
   transition: 1s;
-  background-image: linear-gradient(
-    to right,
-    #71b441 0%,
-    #e4df04 51%,
-    #7f4611 100%
-  );
+  background-image: linear-gradient(to right, #71b441 0%, #e4df04 51%, #7f4611 100%);
   background-size: 200% auto;
 }
 .ponuka .sticky-nav .wp-block-button a:hover {
@@ -826,19 +821,10 @@ header {
 .ponuka .main-content section:not(.sticky-nav) .offer-info p:last-child {
   margin-bottom: 0;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .menu-item-block
-  .wp-block-group__inner-container {
+.ponuka .main-content section:not(.sticky-nav) .menu-item-block .wp-block-group__inner-container {
   margin: 1.5625em 0;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .menu-item-block
-  .wp-block-group__inner-container
-  .is-layout-flex {
+.ponuka .main-content section:not(.sticky-nav) .menu-item-block .wp-block-group__inner-container .is-layout-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -847,41 +833,20 @@ header {
   align-content: stretch;
   border-bottom: 1px solid #e0e0e0;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .menu-item-block
-  .wp-block-group__inner-container
-  .is-layout-flex
-  p:first-of-type {
+.ponuka .main-content section:not(.sticky-nav) .menu-item-block .wp-block-group__inner-container .is-layout-flex p:first-of-type {
   font-size: 1.375em;
   font-weight: 700;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .menu-item-block
-  .wp-block-group__inner-container
-  p {
+.ponuka .main-content section:not(.sticky-nav) .menu-item-block .wp-block-group__inner-container p {
   margin: 0;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .menu-item-block
-  .wp-block-group__inner-container
-  p:not(.is-layout-flex p) {
+.ponuka .main-content section:not(.sticky-nav) .menu-item-block .wp-block-group__inner-container p:not(.is-layout-flex p) {
   text-align: left;
   text-indent: 20px;
   font-size: 0.9375em;
   font-style: italic;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .menu-item-block
-  .wp-block-group__inner-container
-  p:last-child:not(.is-layout-flex p:last-child) {
+.ponuka .main-content section:not(.sticky-nav) .menu-item-block .wp-block-group__inner-container p:last-child:not(.is-layout-flex p:last-child) {
   font-size: 0.75em;
   opacity: 0.5;
   line-height: normal;
@@ -893,11 +858,7 @@ header {
   margin: 0;
   text-align: left;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .wp-block-column
-  .is-layout-flex {
+.ponuka .main-content section:not(.sticky-nav) .wp-block-column .is-layout-flex {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -906,36 +867,17 @@ header {
   align-content: stretch;
   width: 95%;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .wp-block-column
-  .wp-block-group {
+.ponuka .main-content section:not(.sticky-nav) .wp-block-column .wp-block-group {
   margin: 0.8125em 0;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .wp-block-column
-  .wp-block-group
-  p:first-of-type {
+.ponuka .main-content section:not(.sticky-nav) .wp-block-column .wp-block-group p:first-of-type {
   font-size: 1.25em;
   font-weight: 700;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .wp-block-column
-  .wp-block-group
-  P:last-of-type {
+.ponuka .main-content section:not(.sticky-nav) .wp-block-column .wp-block-group P:last-of-type {
   white-space: nowrap;
 }
-.ponuka
-  .main-content
-  section:not(.sticky-nav)
-  .wp-block-column
-  .wp-block-group
-  span {
+.ponuka .main-content section:not(.sticky-nav) .wp-block-column .wp-block-group span {
   font-size: 0.6em;
   opacity: 0.5;
   line-height: normal;
@@ -950,26 +892,19 @@ header {
   color: rgb(26, 110, 216);
 }
 
-.alergens .wp-block-buttons {
+.alergens #show-hide-button {
   display: block;
   margin: 0 auto;
-}
-.alergens .wp-block-button a {
-  padding: 0.3125em 1vw;
+  padding: 0.5em 1.5vw;
   text-align: center;
   border-radius: 50px;
   color: #000;
   border: none;
   transition: 1s;
-  background-image: linear-gradient(
-    to right,
-    #71b441 0%,
-    #e4df04 51%,
-    #7f4611 100%
-  );
+  background-image: linear-gradient(to right, #71b441 0%, #e4df04 51%, #7f4611 100%);
   background-size: 200% auto;
 }
-.alergens .wp-block-button a:hover {
+.alergens #show-hide-button:hover {
   cursor: pointer;
   transition: 1s;
   background-position: 95%;
@@ -1102,12 +1037,7 @@ footer a:hover {
   align-items: center;
   align-content: stretch;
   font-size: 3.75em;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.8) 0%,
-    #71b441 51%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, #71b441 51%, rgba(0, 0, 0, 0.8) 100%);
   background-size: 200% auto;
   transition: 2s;
 }
@@ -1183,12 +1113,7 @@ footer a:hover {
   line-height: 1.6875em;
   border-radius: 50%;
   display: block;
-  background-image: linear-gradient(
-    to right,
-    #bdc3c7 0%,
-    #2c3e50 51%,
-    #bdc3c7 100%
-  );
+  background-image: linear-gradient(to right, #bdc3c7 0%, #2c3e50 51%, #bdc3c7 100%);
   color: #fff;
   opacity: 0.7;
   transition: 0.5s;
@@ -1266,8 +1191,8 @@ footer a:hover {
     animation-duration: unset;
   }
   .contact-social-flex .socialIcons .fa-facebook:hover,
-  .contact-social-flex .socialIcons .fa-instagram:hover,
-  .contact-social-flex .socialIcons .fa-t:hover {
+.contact-social-flex .socialIcons .fa-instagram:hover,
+.contact-social-flex .socialIcons .fa-t:hover {
     transition: unset;
   }
   .contact-social-flex .socialIcons .fa-facebook:hover {
@@ -1280,8 +1205,8 @@ footer a:hover {
     color: #71b441;
   }
   .subsocial a .fa-facebook:hover,
-  .subsocial a .fa-instagram:hover,
-  .subsocial a .fa-t:hover {
+.subsocial a .fa-instagram:hover,
+.subsocial a .fa-t:hover {
     transform: unset;
     rotate: unset;
   }
@@ -1298,7 +1223,7 @@ footer a:hover {
     color: #e4df04;
   }
   #gallery-overlay .previous:hover .fa-solid,
-  #gallery-overlay .next:hover .fa-solid {
+#gallery-overlay .next:hover .fa-solid {
     transform: unset;
   }
   #gallery-overlay .previous:hover {
@@ -1332,10 +1257,7 @@ footer a:hover {
   .ponuka .wp-block-columns {
     display: block;
   }
-  .ponuka
-    .main-content
-    section:not(.sticky-nav)
-    .wp-block-column:first-of-type {
+  .ponuka .main-content section:not(.sticky-nav) .wp-block-column:first-of-type {
     border-right: none;
   }
   .ponuka .dressings .wp-block-column h4:not(.first-of-type) {
@@ -1345,12 +1267,12 @@ footer a:hover {
     opacity: 1;
   }
   #gallery-overlay .previous:hover .fa-solid,
-  #gallery-overlay .next:hover .fa-solid {
+#gallery-overlay .next:hover .fa-solid {
     transform: none;
   }
   .subsocial a .fa-facebook,
-  .subsocial a .fa-instagram,
-  .subsocial a .fa-t {
+.subsocial a .fa-instagram,
+.subsocial a .fa-t {
     -webkit-animation-name: show-off;
     animation-name: show-off;
     -webkit-animation-iteration-count: infinite;
@@ -1398,7 +1320,7 @@ footer a:hover {
     margin-left: 2.5vw;
   }
   #gallery-overlay .previous,
-  #gallery-overlay .next {
+#gallery-overlay .next {
     font-size: 2.5em;
   }
   .footer-flex {
@@ -1444,6 +1366,7 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     align-content: stretch;
+    font-size: 1.6666666667em;
   }
   .contact-social-flex .contact a:not(:last-child) {
     margin-right: 0;
@@ -1458,8 +1381,12 @@ footer a:hover {
     align-items: center;
     align-content: stretch;
   }
+  .mainHeader a img {
+    width: 100px;
+    height: 100px;
+  }
   .header-wrapper h1 {
-    font-size: 3.75em;
+    font-size: 3.125em;
   }
   .header-wrapper .openingHours {
     margin: 0.9375em auto;
@@ -1468,6 +1395,14 @@ footer a:hover {
     justify-content: space-around;
   }
   #altNav li {
+    width: 20%;
     margin-left: 0;
+  }
+  .footer-flex .address ul li a {
+    display: inline-block;
+    font-size: 1.1666666667em;
+  }
+  .footer-flex .address ul li a:last-of-type {
+    margin-top: 0.15625em;
   }
 }

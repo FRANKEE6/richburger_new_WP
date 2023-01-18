@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Complianz &#8211; GDPR/CCPA Cookie Consent - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-23 14:00:09+0000\n"
+"PO-Revision-Date: 2023-01-18 08:08:40+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1096,11 +1096,11 @@ msgstr "Ak chcete začať od predvolených hodnôt, môžete použiť tlačidlo 
 msgid "Reset to default values"
 msgstr "Obnoviť predvolené hodnoty"
 
-#: cookie/class-cookie-admin.php:3304
+#: cookie/class-cookie-admin.php:3322
 msgid "Continue the wizard to categorize cookies and configure consent."
 msgstr "Pokračujte v sprievodcovi kategorizáciou súborov cookie a konfiguráciou súhlasu."
 
-#: cookie/class-cookie-admin.php:3303
+#: cookie/class-cookie-admin.php:3321
 msgid "The scan found %s cookie on your domain."
 msgid_plural "The scan found %s cookies on your domain."
 msgstr[0] "Kontrola našla %s súbor cookie vo vašej doméne."
@@ -1614,31 +1614,31 @@ msgstr "Toto tlačidlo odmietne všetky súbory cookie okrem nevyhnutných súbo
 msgid "Which banner do you want to display in other regions?"
 msgstr "Ktorý banner chcete zobraziť v iných regiónoch?"
 
-#: cookie/class-cookie-admin.php:3576
+#: cookie/class-cookie-admin.php:3594
 msgid "Syncing..."
 msgstr "Synchronizuje sa ..."
 
-#: cookie/class-cookie-admin.php:3553
+#: cookie/class-cookie-admin.php:3571
 msgid "Sync"
 msgstr "Synchronizácia"
 
-#: cookie/class-cookie-admin.php:3501
+#: cookie/class-cookie-admin.php:3519
 msgid "Scan"
 msgstr "Skenovanie"
 
-#: cookie/class-cookie-admin.php:3316
+#: cookie/class-cookie-admin.php:3334
 msgid "Nothing found yet."
 msgstr "Zatiaľ sa nič nenašlo."
 
-#: cookie/class-cookie-admin.php:1555 templates/dashboard/documents.php:74
+#: cookie/class-cookie-admin.php:1573 templates/dashboard/documents.php:74
 msgid "Create"
 msgstr "Vytvoriť"
 
-#: cookie/class-cookie-admin.php:1544
+#: cookie/class-cookie-admin.php:1562
 msgid "A Processor or Service Provider is the party that processes personal data on behalf of a responsible organization or person. If you are this organization or person, you should probably sign a Processing Agreement with them. You can use a Processing Agreement outside of Complianz, or generate one here."
 msgstr "Spracovateľ alebo poskytovateľ služieb je strana, ktorá spracúva osobné údaje v mene zodpovednej organizácie alebo osoby. Ak ste táto organizácia alebo osoba, pravdepodobne by ste s nimi mali podpísať zmluvu o spracovaní. Môžete použiť zmluvu o spracovaní mimo Complianz, alebo ju vygenerovať tu."
 
-#: cookie/class-cookie-admin.php:949 cookie/class-cookie-admin.php:1279
+#: cookie/class-cookie-admin.php:949 cookie/class-cookie-admin.php:1292
 msgid "You haven't accepted the usage of the cookiedatabase.org API. To automatically complete your cookie descriptions, please choose yes."
 msgstr "Neprijali ste používanie rozhrania API Cookiedatabase.org. Ak chcete automaticky dopĺňať popisy súborov cookie, zvoľte áno."
 
@@ -2247,7 +2247,7 @@ msgstr "Marketingové/sledovacie cookies"
 msgid "Legal Document"
 msgstr "Právny dokument"
 
-#: rest-api/rest-api.php:141
+#: rest-api/rest-api.php:140
 msgctxt "cookie policy"
 msgid "We have received a privacy signal from your browser. For this reason we have set your privacy settings on this website to strictly necessary. If you want to have full functionality, please consider excluding %s from your privacy settings."
 msgstr "Z vášho prehliadača sme dostali signál o ochrane osobných údajov. Z tohto dôvodu sme nastavili vaše nastavenia ochrany osobných údajov na týchto webových stránkach na nevyhnutné. Ak chcete mať plnú funkčnosť, zvážte vylúčenie %s z vašich nastavení ochrany osobných údajov."
@@ -2392,6 +2392,7 @@ msgstr "Ak je to tak, skenovanie sa rozšíri do časti wp-admin vášho webu."
 
 #: config/documents/documents.php:22 config/questions-wizard.php:145
 #: gutenberg/build/index.js:1 gutenberg/src/index.js:267
+#: gutenberg/build/index.js:2204
 msgid "Disclaimer"
 msgstr "Vylúčenie zodpovednosti"
 
@@ -2456,7 +2457,7 @@ msgstr "Vaša stránka používa Divi. Ak na svojich stránkach používate reCA
 msgid "The cookie scan detected cookies from services that share data with Third Parties. According to US privacy laws, your website is considered to sell personal data if it collects and shares any personal data in return for money or services. This includes a service like Google Analytics."
 msgstr "Kontrola súborov cookie zistila súbory cookie zo služieb, ktoré zdieľajú údaje s tretími stranami. Podľa zákonov USA o ochrane osobných údajov sa vaša webová lokalita považuje za predaj osobných údajov, ak zhromažďuje a zdieľa akékoľvek osobné údaje za peniaze alebo služby. To zahŕňa službu ako Google Analytics."
 
-#: class-field.php:2057 cookie/class-cookie-admin.php:3605
+#: class-field.php:2057 cookie/class-cookie-admin.php:3623
 msgid "Services in %s"
 msgstr "Služby v %s"
 
@@ -2566,11 +2567,11 @@ msgstr "Všetky potrebné stránky už boli vytvorené. Ak chcete, môžete tu a
 msgid "The pages marked with X should be added to your website. You can create these pages with a shortcode, a Gutenberg block or use the below \"Create missing pages\" button."
 msgstr "Stránky označené písmenom X by mali byť pridané na váš web. Tieto stránky môžete vytvoriť pomocou krátkeho kódu, Gutenbergovho bloku alebo použite nižšie uvedené tlačidlo „Vytvoriť chýbajúce stránky“."
 
-#: class-field.php:2057 cookie/class-cookie-admin.php:3605
+#: class-field.php:2057 cookie/class-cookie-admin.php:3623
 msgid "Cookies in %s"
 msgstr "Súbory cookie v %s"
 
-#: cookie/class-cookie-admin.php:3573
+#: cookie/class-cookie-admin.php:3591
 msgid "Show deleted cookies"
 msgstr "Zobraziť zmazané cookies"
 
@@ -2915,11 +2916,11 @@ msgstr "Synchronizácia zakázaná: Stáva sa to vtedy, keď sa všetky súbory 
 msgid "If you want to clear all cookies from the plugin, you can do so here. You'll need to run a scan again afterwards. If you want to start with a clean slate, you might need to clear your browsercache, to make sure all cookies are removed from your browser as well."
 msgstr "Ak chcete z doplnku vymazať všetky súbory cookie, môžete to urobiť tu. Potom budete musieť znova spustiť skenovanie. Ak chcete začať s čistým štítom, možno budete musieť vymazať vyrovnávaciu pamäť prehliadača a uistiť sa, že z vášho prehliadača sú odstránené aj všetky súbory cookie."
 
-#: cookie/class-cookie-admin.php:3509
+#: cookie/class-cookie-admin.php:3527
 msgid "Clear cookies"
 msgstr "Vymazať cookies"
 
-#: cookie/class-cookie-admin.php:3508
+#: cookie/class-cookie-admin.php:3526
 msgid "Are you sure? This will permanently delete the list of cookies."
 msgstr "Si si istý? Zoznam súborov cookie sa tým natrvalo odstráni."
 
@@ -2927,19 +2928,19 @@ msgstr "Si si istý? Zoznam súborov cookie sa tým natrvalo odstráni."
 msgid "Your server does not have CURL installed, which is required for the scan. Please contact your hosting company to install CURL."
 msgstr "Váš server nemá nainštalovanú CURL, ktorá je potrebná na skenovanie. Kontaktujte prosím svoju hostiteľskú spoločnosť a nainštalujte CURL."
 
-#: cookie/class-cookie-admin.php:3212
+#: cookie/class-cookie-admin.php:3230
 msgid "(not synced yet)"
 msgstr "(zatiaľ nesynchronizované)"
 
-#: cookie/class-cookie-admin.php:2892 functions.php:2160
+#: cookie/class-cookie-admin.php:2910 functions.php:2160
 msgid "Purpose pending investigation"
 msgstr "Účel čakajúceho vyšetrovania"
 
-#: cookie/class-cookie-admin.php:1003 cookie/class-cookie-admin.php:1334
+#: cookie/class-cookie-admin.php:1016 cookie/class-cookie-admin.php:1352
 msgid "Could not connect to cookiedatabase.org"
 msgstr "Nepodarilo sa pripojiť k webu cookiedatabase.org"
 
-#: cookie/class-cookie-admin.php:964 cookie/class-cookie-admin.php:1294
+#: cookie/class-cookie-admin.php:964 cookie/class-cookie-admin.php:1307
 msgid "A request is already running. Please be patient until the current request finishes"
 msgstr "Žiadosť už prebieha. Buďte trpezliví, kým sa aktuálna požiadavka neskončí"
 
@@ -3126,12 +3127,12 @@ msgid "Add new service"
 msgstr "Pridať novú službu"
 
 #: class-document.php:1301 gutenberg/build/index.js:1
-#: gutenberg/src/index.js:143
+#: gutenberg/src/index.js:143 gutenberg/build/index.js:2080
 msgid "Edit document and stop synchronization"
 msgstr "Upravte dokument a zastaviť synchronizáciu"
 
 #: class-document.php:1297 gutenberg/build/index.js:1
-#: gutenberg/src/index.js:142
+#: gutenberg/src/index.js:142 gutenberg/build/index.js:2079
 msgid "Synchronize document with Complianz"
 msgstr "Synchronizujte dokument s Complianz"
 
@@ -4009,7 +4010,7 @@ msgstr "USA"
 #: integrations/plugins/elementor-pro/custom-widgets/cmplz-link-widget.php:549
 #: integrations/plugins/gravity-forms.php:148
 #: integrations/plugins/gravity-forms.php:188 gutenberg/build/index.js:1
-#: gutenberg/src/index.js:265
+#: gutenberg/src/index.js:265 gutenberg/build/index.js:2202
 msgid "Privacy Statement"
 msgstr "Vyhlásenie o ochrane súkromia"
 
@@ -4539,7 +4540,7 @@ msgstr "Akú máte adresu?"
 #: integrations/plugins/elementor-pro/custom-widgets/cmplz-link-widget.php:481
 #: integrations/plugins/elementor-pro/custom-widgets/cmplz-link-widget.php:546
 #: templates/dashboard/documents-conditional.php:10 gutenberg/build/index.js:1
-#: gutenberg/src/index.js:266
+#: gutenberg/src/index.js:266 gutenberg/build/index.js:2203
 msgid "Cookie Policy"
 msgstr "Zásady používania súborov cookie"
 
@@ -5739,7 +5740,7 @@ msgstr "Sprievodca ešte nie je dokončený. Ak ste odpovedali na všetky požad
 msgid "Great, the main wizard is completed. This means the general data is already in the system, and you can continue with the next question. This will start a new, empty document."
 msgstr "Skvelé, hlavný čarodejník je dokončený. To znamená, že všeobecné údaje sú už v systéme, a môžete pokračovať ďalšou otázkou. Spustí sa nový, prázdny dokument."
 
-#: cookie/class-cookie-admin.php:1542
+#: cookie/class-cookie-admin.php:1560
 msgid "Processing Agreements"
 msgstr "Dohody o spracovaní"
 
@@ -5834,15 +5835,15 @@ msgstr[2] "Zatiaľ nie sú všetky vygenerované dokumenty priradené k menu, m�
 msgid "No menus were found. Skip this step, or %screate a menu%s first."
 msgstr "Neboli nájdené žiadne ponuky. Tento krok preskočte alebo %snajskôr vytvorte ponuku%s."
 
-#: config/steps.php:54 cookie/class-cookie-admin.php:3514
+#: config/steps.php:54 cookie/class-cookie-admin.php:3532
 msgid "Cookie scan"
 msgstr "Skenovanie súborov cookie"
 
-#: cookie/class-cookie-admin.php:3300
+#: cookie/class-cookie-admin.php:3318
 msgid "No cookies detected"
 msgstr "Neboli zistené žiadne súbory cookie"
 
-#: cookie/class-cookie-admin.php:3192 DNSMPD/class-DNSMPD-table.php:292
+#: cookie/class-cookie-admin.php:3210 DNSMPD/class-DNSMPD-table.php:292
 #: DNSMPD/csv.php:73
 msgid "%s at %s"
 msgstr "%s v %s"
