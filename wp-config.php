@@ -24,10 +24,10 @@
 define('DB_NAME', 'richburger_new_wp');
 
 /** Database username */
-define('DB_USER', 'FRANKEE');
+define('DB_USER', 'username_here');
 
 /** Database password */
-define('DB_PASSWORD', '8EE2pknk');
+define('DB_PASSWORD', 'password_here');
 
 /** Database hostname */
 define('DB_HOST', 'localhost');
