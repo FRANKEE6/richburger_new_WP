@@ -10,7 +10,7 @@ _This project contain custom wordpress theme i've coded for my friend_
 2. Create new database table at localhost
 3. Import database file from DATABASE folder in root of this project
 4. Open wp-config.php from root of this project in your code editor
-5. At change database settings to match with your database
+5. Change database settings to match with your database
 
 **That's it**
 
