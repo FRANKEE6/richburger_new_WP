@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.1.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-11 05:46:07+0000\n"
+"PO-Revision-Date: 2023-01-20 04:27:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -69,6 +69,21 @@ msgstr "Responzívnejší text pomocou fluidnej typografie"
 msgid "Combine it with block locking options for even more advanced control over your blocks."
 msgstr "Skombinujte to s možnosťami zamykania blokov pre ešte pokročilejšiu kontrolu nad vašimi blokmi."
 
+#. translators: %s: Link to content locking dev note.
+#: wp-admin/about.php:504
+msgid "Thanks to <a href=\"%s\">content-only editing settings</a>, layouts can be locked within container blocks. In a content-only block, its children are invisible to the List View and entirely uneditable. So you control the layout while your writers can focus on the content."
+msgstr "Vďaka <a href=\"%s\">nastaveniam pre obmedzenie úprav na samotný obsah</a> je možné uzamknúť rozloženia komponentov v rámci kontajnerových blokov. V bloku, v ktorom sú úpravy obmedzené na samotný obsah, nie sú  jeho komponenty zobrazené a nie je možné ich upravovať. Vy teda máte pod kontrolou rozloženie, zatiaľ čo vaši autori sa môžu sústrediť na obsah."
+
+#: wp-admin/about.php:499
+msgid "Content-only editing support for container blocks"
+msgstr "Podpora obmedzenia úprav na obsah pre kontajnerové bloky"
+
+#. translators: %s: Link to install Performance Lab plugin if permitted,
+#. otherwise link to plugin on WordPress.org.
+#: wp-admin/about.php:486
+msgid "Be among the first to get the latest improvements by adding the <a href=\"%s\">Performance Lab plugin</a> to your WordPress test site or sandbox."
+msgstr "Buďte medzi prvými, ktorí získajú najnovšie vylepšenia pridaním <a href=\"%s\">pluginu Performance Lab</a> na našu testovaciu stránku WordPress alebo sandbox."
+
 #: wp-admin/about.php:466
 msgid "Performance highlights"
 msgstr "Zlepšenie výkonu"
@@ -84,6 +99,12 @@ msgstr "Pokračujúci vývoj možností rozloženia"
 #: wp-admin/about.php:346
 msgid "Updated interface options and features"
 msgstr "Aktualizované možnosti a funkcie rozhrania"
+
+#. translators: %s: "General Settings" admin page title, linked to the page if
+#. the user can edit options.
+#: wp-admin/about.php:328
+msgid "The site tagline is empty by default in new sites but can be modified in %s."
+msgstr "Východzia hodnota pre slogan stránky je na nových stránkach prázdna, ale je možné ho upraviť v %s."
 
 #: wp-admin/about.php:283
 msgid "A streamlined style system"
